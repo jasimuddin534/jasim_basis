@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>Demo web site-9</title>
+    <link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+			var s = $("#mainmenu");
+			var pos = s.position();                    
+			$(window).scroll(function() {
+				var windowpos = $(window).scrollTop();
+				//s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+				if (windowpos >= pos.top) {
+					s.addClass("stick");
+				} else {
+					s.removeClass("stick"); 
+				}
+			});
+		});
+
+		</script>
+
+</head>
+<body style="background: url(images/bg.PNG) repeat fixed #ddd;">
+    <div class="fixd main" id="sticky-anchor">
+
+        <div class="hader">
+            <div class="banner">
+                <img src="images/banner.PNG" alt="image not found" />
+            </div>
+
+            <div class="sidtmenu">
+                <ul style="">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Patners</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mainmenu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">OUR STAFF</a></li>
+                <li><a href="#">VEDIO</a></li>
+                <li><a href="#">IMAGE</a></li>
+            </ul>
+        </div>
+
+
+        <div class="content">
+            <div class="slider">
+                <img src="images/slider.PNG" alt="image not found" />
+            </div>
+            <div class="contentsitbar">
+                <div class="sitbar1 underline">
+                    <h2>Featured Content</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+                    <input class="bt" type="button" value="> readmore" />
+                </div>
+                <div class="sitbar1">
+                    <h2>Featured Content</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+                    <input class="bt" type="button" value="> readmore" />
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontent fixd">
+            <div class="welcome fixd">
+                <h1>WELCOME MESSAGE</h1>
+                <img src="images/welcome.PNG" alt="image not found" />
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+                <input class="bt2" type="button" value="> readmore" />
+            </div>
+            <div class="homepothy fixd">
+                <h1>HOMEOPATHY</h1>
+                <h4 class="lemon">LEMON BALM</h4>
+                <h4>PEDESA FERODE LERTSAES</h4>
+                <h4>NASERTTAS DISKERTA</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor sit amet</p>
+
+
+                <h4 class="lemon">LEMON BALM</h4>
+                <h4>PEDESA FERODE LERTSAES</h4>
+                <h4>NASERTTAS DISKERTA</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor sit amet</p>
+
+                <input class="bt3" type="button" value="> readmore" />
+            </div>
+            <div class="letestbolg fixd">
+                <h1>LETES BLOGS</h1>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">OUR STAFF</a></li>
+                    <li><a href="#">VEDIO</a></li>
+                    <li><a href="#">IMAGE</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">OUR STAFF</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="footercontent1 fixd">
+            <div class="support fixd">
+                <div class="hed1 fixd">
+                    <h1>SUPPORT IMMUNE SYSTEM</h1>
+                </div>
+                <div class="supportimg fixd">
+                    <img src="images/suport.PNG" alt="image not found" />
+                </div>
+                <div class="supporttext fixd">
+                    <h4 class="lemon">LEMON BALM</h4>
+                    <h4>PEDESA FERODE LERTSAES</h4>
+                    <h4>NASERTTAS DISKERTA</h4>
+                    <input class="bt4" type="button" value="> readmore" />
+                </div>
+            </div>
+            <div class="normal fixd">
+                <div class="hed2 fixd">
+                    <h1>NORMAL META BLOSIM</h1>
+                </div>
+                <div class="supportimg fixd">
+                    <img src="images/normoal.PNG" alt="image not found" />
+                </div>
+                <div class="supporttext fixd">
+                    <h4 class="lemon">LEMON BALM</h4>
+                    <h4>PEDESA FERODE LERTSAES</h4>
+                    <h4>NASERTTAS DISKERTA</h4>
+                    <input class="bt4" type="button" value="> readmore" />
+                </div>
+            </div>
+        </div>
+
+        <div class="footer fixd">
+            <div class=" fixd">
+            </div>
+            <div class=" fixd">
+            </div>
+            <div class=" fixd">
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
