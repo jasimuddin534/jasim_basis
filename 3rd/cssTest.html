@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>This From Title</title>
+		<style>
+			/*Type selection 
+			div{
+			background-color:red;
+			}*/
+			
+			/*Type selection 
+			div[class="myAnothersClass"]{
+			background-color:red;
+			}*/
+			
+			/*Type selection 
+			div[class ~="myAnothersClass"]{
+			background-color:red;
+			}*/
+			
+			/*Type selection 
+			div[class ^="myAnothersClass"]{
+			background-color:red;
+			}*/
+			
+			/*Type selection */
+			div[class $="myAnothersClass"]{
+			background-color:red;
+			}
+			
+			/*Type selection 
+			div[class *="ass"]{
+			background-color:red;
+			}*/
+			
+		</style>
+	</head>
+	<body>
+		<div>This is Div 1</div>
+		<div> This is Div 2</div>
+		<div class="myClass" > This is Div 3</div>
+		<div class="myClass" >This is Div 4</div>
+		<div class="myClass" > This is Div 5</div>
+		<div class="myAnothersClass" > This is Div 6</div>
+		<div class="notMyClass" > This is Div 7</div>
+		<div class="myClass myAnothersClass" > This is Div 8</div>
+		<p>This is P </p>
+		
+		
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+        <head>
+                <style>
+                        /*type selection
+                        div{
+                                background-color:red;
+                        }*/
+                        /*attr selection
+                        div[class]{
+                                background-color:red;
+                        }
+                        div[class ~="myClass"]{
+                                background-color:red;
+                        }
+                       
+                        div[class ^="my"]{
+                                background-color:red;
+                        }
+                       
+                        div[class $="AnotherClass"]{
+                                background-color:red;
+                        }*/
+                       
+                        div[class *="ass"]{
+                                background-color:red;
+                        }
+               
+                </style>
+        </head>
+        <body>
+                <div>This is div 1</div>
+                <div>This is div 2</div>
+                <div class="myClass">This is div 3</div>
+                <div class="myClass">This is div 4</div>
+                <div class="myClass">This is div 5</div>
+                <div class="myAnotherClass">This is div 6</div>
+                <div class="notMyClass">This is div 7</div>
+                <div class="myClass myAnotherClass">This is div 8</div>
+                <p> this is a P</p>
+        </body>
+</html>
