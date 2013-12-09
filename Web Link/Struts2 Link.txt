@@ -1,0 +1,7 @@
+http://www.tutorialspoint.com/struts_2/struts_examples.htm
+
+
+http://exadel.com/tutorial/struts/5.2/guess/strutstutorial.html
+
+
+https://netbeans.org/kb/docs/web/quickstart-webapps-struts.html#overview

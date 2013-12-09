@@ -1,0 +1,9 @@
+http://www.asp.net/web-forms/tutorials/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1
+http://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a
+
+http://www.codeproject.com/Articles/363040/An-Introduction-to-Entity-Framework-for-Absolute-B
+
+http://www.asp.net/mvc/tutorials/older-versions/models-%28data%29/creating-model-classes-with-the-entity-framework-cs
+
+http://msdn.microsoft.com/en-us/library/7kh55542.aspx
+http://msdn.microsoft.com/en-us/library/w16865z6.aspx

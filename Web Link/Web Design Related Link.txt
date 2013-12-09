@@ -1,0 +1,19 @@
+CSS Shapes Example
+===================================
+http://css-tricks.com/examples/ShapesOfCSS/
+
+
+Color Scheme Designer
+=================================
+http://colorschemedesigner.com/
+
+
+Background Pattern Image
+===================
+http://subtlepatterns.com/
+
+
+Image Palaceholder
+===================
+http://placehold.it/
+http://net.tutsplus.com/articles/web-roundups/the-top-8-placeholders-for-web-designers/

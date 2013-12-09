@@ -1,0 +1,9 @@
+http://www.openbravo.com/
+http://en.wikipedia.org/wiki/Enterprise_resource_planning#Connectivity_to_plant_floor_information
+http://www.openbravo.com/product/erp/resources/
+http://butler.openbravo.com/heartbeat-server/license/GetTrial
+http://demo2.openbravo.com/openbravo/#{st:0,bm:[{viewId:__OBMyOpenbravoImplementation__,params:{myOB:true,canClose:false,tabTitle:__Workspace__}}]}
+http://erp-software.findthebest.com/q/182/2051/What-is-Openbravo-ERP-by-Openbravo-enterprise-resource-planning-ERP-software
+http://wiki.openbravo.com/wiki/Instance_Activation
+http://wiki.openbravo.com/wiki/File:OB3_Module_Management.png
+http://www.openbravo.com/product/others/opensource/

@@ -1,0 +1,11 @@
+http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
+
+http://www.asp.net/web-api/raw-content/tutorials/creating-a-web-api-that-supports-crud-operations
+
+
+http://www.asp.net/web-api/overview/creating-web-apis/using-web-api-with-entity-framework/using-web-api-with-entity-framework,-part-1
+
+
+http://code.msdn.microsoft.com/ASPNET-Web-API-CRUD-4b41ff39
+
+http://www.codeproject.com/Articles/549152/Introduction-to-ASP-NET-Web-API

@@ -1,0 +1,9 @@
+http://weblogs.asp.net/scottgu/archive/2007/05/19/using-linq-to-sql-part-1.aspx 
+http://weblogs.asp.net/scottgu/archive/2006/05/14/Using-LINQ-with-ASP.NET-_2800_Part-1_2900_.aspx  
+http://net.tutsplus.com/tutorials/asp-net/net-linq-from-scratch/ 
+http://msdn.microsoft.com/en-us/library/bb397927.aspx
+http://dotnetslackers.com/articles/csharp/IntroducingLINQ1.aspx
+
+http://www.c-sharpcorner.com/UploadFile/db2972/create-read-update-and-delete-crud-operation-using-linq-to/
+
+http://weblogs.asp.net/scottgu/archive/2006/05/14/Using-LINQ-with-ASP.NET-_2800_Part-1_2900_.aspx

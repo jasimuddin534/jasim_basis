@@ -1,0 +1,2 @@
+http://www.asp.net/web-api/overview/creating-web-apis/using-web-api-with-entity-framework/using-web-api-with-entity-framework,-part-1
+http://www.codeproject.com/Articles/283976/CRUD-Create-Read-Update-Delete

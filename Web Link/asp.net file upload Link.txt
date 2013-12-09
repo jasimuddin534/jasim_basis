@@ -1,0 +1,2 @@
+http://www.codeproject.com/Articles/113418/ASP-NET-File-Upload-with-Progress-Bar
+http://www.codeproject.com/Articles/19932/File-Upload-Progress-bar-without-Using-AJAX

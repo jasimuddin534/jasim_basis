@@ -1,0 +1,8 @@
+http://jasperforge.org/projects/ireport
+http://jasperforge.org/projects/jasperreports
+http://jasperforge.org/projects/ireport
+http://struts.apache.org/
+http://www.javanb.com/netbeans/1/19846.html#library
+http://edwin.baculsoft.com/2010/11/creating-web-based-reports-using-jasper-report/
+http://www.coderanch.com/t/559148/open-source/Printing-ireport-jsp
+http://java.dzone.com/articles/java-reporting-part-2

@@ -1,0 +1,3 @@
+http://knockoutjs.com/downloads/index.html
+
+http://www.dotnet-tricks.com/Tutorial/knockout/0bOU010413-Knockout-CRUD-Operations-using-MVC4.html

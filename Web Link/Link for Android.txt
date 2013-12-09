@@ -1,0 +1,40 @@
+
+	Some link about Android
+	-----------------------
+	-----------------------
+
+
+
+24/06/12
+----------------------------------------
+
+http://kenai.com/projects/nbandroid/pages/Install
+http://developer.android.com/about/versions/android-2.3.html
+https://developers.google.com/android/
+http://en.wikipedia.org/wiki/Android_software_development
+https://github.com/facebook/facebook-android-sdk
+
+
+
+
+25/06/12
+---------------------------------------
+
+http://mobilestone.net/en/tutorial-develop-android-applications-using-netbeans/
+http://binarywasteland.com/2011/07/install-netbeans-android-sdk/
+http://forum.geeksphone.com/index.php?topic=537.0
+http://en.androidwiki.com/wiki/Developing_Android_aplications_using_NetBeans
+http://www.techjail.net/create-hello-world-program-for-android-via-netbeans.html
+http://www.techjail.net/starting-programming-for-android-with-netbeans.html
+http://www.youtube.com/watch?v=IaA7SVDEQcQ
+http://www.youtube.com/watch?v=YKY3xYmG_Tc
+http://javadude.wordpress.com/2009/02/21/how-to-get-started-with-android-and-netbeans/
+http://wiki.netbeans.org/IntroAndroidDevNetBeans
+
+
+
+Eclips Android Pluaging Link
+---------------------------------------------
+http://developer.android.com/tools/sdk/eclipse-adt.html
+developer.android.com/sdk/installing/installing-adt.html
+http://developer.android.com/about/index.html
