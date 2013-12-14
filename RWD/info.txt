@@ -61,3 +61,28 @@ http://learnlayout.com/position-example.html
 Exam: This is exam link
 http://jasim.zadid.net/jasim_basis/exam/exam1.html
 http://jasim.zadid.net/jasim_basis/exam/exam2.html
+
+
+9th class
+========================
+Responsiv web site :
+http://www.barackobama.com/#get-the-facts
+
+http://pastebin.com/YQfhBqNU
+
+Tools : 
+http://validator.w3.org/
+
+http://foundation.zurb.com/
+http://getbootstrap.com/
+http://960.gs/
+
+
+10th
+=========================
+http://ia.net/blog/responsive-typography-the-basics/
+http://www.w3.org/TR/css3-values/#viewport-relative-lengths/
+http://www.ipsum-generator.com/
+http://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://craigmod.com/bibliotype/demo/
