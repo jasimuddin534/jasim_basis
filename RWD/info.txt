@@ -86,3 +86,7 @@ http://www.ipsum-generator.com/
 http://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
 http://snook.ca/archives/html_and_css/font-size-with-rem
 http://craigmod.com/bibliotype/demo/
+
+11th
+================================
+http://www.unistorgroup.com/uploads/documents/OReilly.JavaScript.The.Good.Parts.May.2008.pdf
