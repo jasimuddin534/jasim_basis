@@ -1,3 +1,17 @@
 http://dorshok.com/videostags/css-bangla-tutorial/
-
+http://www.w3.org/TR/css3-selectors/
 http://website.informer.com/terms/Css_Bangla_Tutorial_Pdf_Download_Free
+
+CSS Shapes Example
+===================================
+http://css-tricks.com/examples/ShapesOfCSS/
+
+
+Color Scheme Designer
+=================================
+http://colorschemedesigner.com/
+
+
+Curcal Menu
+================================
+http://dabblet.com/gist/3979221/cb69c5e8ccf0745fff2c94b47b27b108931f1a15
