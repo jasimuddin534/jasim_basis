@@ -1,0 +1,412 @@
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+
+.maincontent {
+    width: 980px;
+}
+
+.hederarea {
+    margin-top: 2px;
+}
+
+    .hederarea img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 70px;
+        width: 120px;
+        height: 120px;
+    }
+
+.titlearea {
+    margin: 25px 0px;
+}
+
+    .titlearea h1 {
+        font-size: 40px;
+    }
+
+.tablediv {
+    width: 460px;
+    padding: 70px 20px 70px 0px;
+    float: left;
+}
+
+.getdiv {
+    width: 460px;
+    padding: 80px 20px 80px 0px;
+    float: left;
+}
+
+.contentarea {
+}
+
+#yellowCircle {
+    left: 130px;
+    width: 130px;
+    height: 130px;
+}
+
+
+    #yellowCircle h2 {
+        font-size: 36px;
+        padding-top: 45px;
+    }
+
+.numberCircle {
+    width: 60px;
+    height: 60px;
+}
+
+
+    .numberCircle h2 {
+        font-size: 35px;
+        padding-top: 14px;
+    }
+
+
+.tableNo1, .getNo1 {
+    left: 267px;
+    top: -125px;
+}
+
+
+.tableNo2, .getNo2 {
+    left: 263px;
+    top: -120px;
+}
+
+.tableNo3, .getNo3 {
+    left: 218px;
+    top: -126px;
+}
+
+.tableNo4, .getNo4 {
+    left: 150px;
+    top: -170px;
+}
+
+#fuchsiaCircle {
+    left: 126px;
+    width: 130px;
+    height: 130px;
+}
+
+    #fuchsiaCircle h2 {
+        font-size: 36px;
+        padding-top: 45px;
+    }
+
+
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .maincontent {
+        width: 760px;
+    }
+
+    .hederarea {
+        margin-top: 2px;
+    }
+
+        .hederarea img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 70px;
+            width: 100px;
+            height: 100px;
+        }
+
+    .titlearea {
+        margin: 20px 0px;
+    }
+
+        .titlearea h1 {
+            font-size: 30px;
+        }
+
+    .tablediv {
+        width: 350px;
+        padding: 50px 20px 50px 0px;
+        float: left;
+    }
+
+    .getdiv {
+        width: 350px;
+        padding: 50px 20px 50px 0px;
+        float: left;
+    }
+
+    .contentarea {
+    }
+
+    #yellowCircle {
+        left: 130px;
+        width: 130px;
+        height: 130px;
+    }
+
+        #yellowCircle h2 {
+            font-size: 36px;
+            padding-top: 45px;
+        }
+
+    .numberCircle {
+        width: 60px;
+        height: 60px;
+    }
+
+        .numberCircle h2 {
+            font-size: 30px;
+            padding-top: 12px;
+        }
+
+    .tableNo1, .getNo1 {
+        left: 267px;
+        top: -125px;
+    }
+
+
+    .tableNo2, .getNo2 {
+        left: 263px;
+        top: -120px;
+    }
+
+    .tableNo3, .getNo3 {
+        left: 218px;
+        top: -126px;
+    }
+
+    .tableNo4, .getNo4 {
+        left: 150px;
+        top: -170px;
+    }
+
+    #fuchsiaCircle {
+        left: 126px;
+        width: 130px;
+        height: 130px;
+    }
+
+        #fuchsiaCircle h2 {
+            font-size: 36px;
+            padding-top: 45px;
+        }
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+    .maincontent {
+        width: 346px;
+    }
+
+    .hederarea {
+        margin-top: 2px;
+    }
+
+        .hederarea img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 70px;
+            width: 80px;
+            height: 80px;
+        }
+
+    .titlearea {
+        margin: 25px 0px;
+    }
+
+        .titlearea h1 {
+            font-size: 22px;
+        }
+
+    .contentarea {
+        padding: 0px;
+    }
+
+    .tablediv {
+        width: 335px;
+        padding: 40px 10px 0px 0px;
+        float: none;
+    }
+
+    .getdiv {
+        width: 335px;
+        padding: 40px 10px 0px 0px;
+        float: none;
+    }
+
+    #yellowCircle {
+        left: 80px;
+        width: 105px;
+        height: 105px;
+    }
+
+        #yellowCircle h2 {
+            font-size: 25px;
+            padding-top: 35px;
+        }
+
+    .numberCircle {
+        width: 40px;
+        height: 40px;
+    }
+
+        .numberCircle h2 {
+            font-size: 22px;
+            padding-top: 8px;
+        }
+
+    .tableNo1, .getNo1 {
+        left: 175px;
+        top: -130px;
+    }
+
+
+    .tableNo2, .getNo2 {
+        left: 195px;
+        top: -130px;
+    }
+
+    .tableNo3, .getNo3 {
+        left: 188px;
+        top: -125px;
+    }
+
+    .tableNo4, .getNo4 {
+        left: 160px;
+        top: -127px;
+    }
+
+    #fuchsiaCircle {
+        left: 80px;
+        width: 105px;
+        height: 105px;
+    }
+
+        #fuchsiaCircle h2 {
+            font-size: 25px;
+            padding-top: 35px;
+        }
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .maincontent {
+        width: 346px;
+    }
+
+    .hederarea {
+        margin-top: 2px;
+    }
+
+        .hederarea img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 70px;
+            width: 80px;
+            height: 80px;
+        }
+
+    .titlearea {
+        margin: 25px 0px;
+    }
+
+        .titlearea h1 {
+            font-size: 20px;
+        }
+
+    .contentarea {
+        padding: 0px;
+    }
+
+    .tablediv {
+        width: 335px;
+        padding: 30px 30px 0px 0px;
+        float: none;
+    }
+
+    .getdiv {
+        width: 335px;
+        padding: 30px 5px 0px 0px;
+        float: none;
+    }
+
+    #yellowCircle {
+        left: 80px;
+        width: 105px;
+        height: 105px;
+    }
+
+        #yellowCircle h2 {
+            font-size: 25px;
+            padding-top: 35px;
+        }
+
+    .numberCircle {
+        width: 40px;
+        height: 40px;
+    }
+
+        .numberCircle h2 {
+            font-size: 22px;
+            padding-top: 8px;
+        }
+
+    .tableNo1, .getNo1 {
+        left: 175px;
+        top: -130px;
+    }
+
+
+    .tableNo2, .getNo2 {
+        left: 195px;
+        top: -130px;
+    }
+
+    .tableNo3, .getNo3 {
+        left: 188px;
+        top: -125px;
+    }
+
+    .tableNo4, .getNo4 {
+        left: 160px;
+        top: -127px;
+    }
+}

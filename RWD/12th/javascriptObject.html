@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Language Construct</title>
+    </head>
+
+    <body>
+        <script>
+            var calculator = {
+
+                number1 : 1,
+                number2 : 2,
+        
+                add : function(){ 
+                    var  a = this.number1+this.number2;
+                    return a;
+                },        
+                substract : function(){        
+                    return 'substract';
+                },        
+                multiply : function(){        
+                    return 'multiply';
+                }
+
+            };
+
+            console.log(typeof calculator);
+            console.log(typeof calculator.multiply);
+            console.log(typeof calculator.multiply());
+            console.log(calculator.multiply());
+            console.log(calculator.add());
+            document.write("test");
+
+        </script>
+    </body>
+</html>

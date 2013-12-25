@@ -1,0 +1,257 @@
+/** {
+    padding: 0;
+    margin: 0px;
+}*/
+
+body {
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 25px;
+}
+
+.fixed {
+    overflow: hidden;
+}
+
+.main {
+    margin: 0 auto;
+    /*background-color: #d5cfcf;*/
+    width: 960px;
+    background: url(images/bg.jpg) no-repeat fixed;
+}
+
+.header {
+    width: 960px;
+    text-align: center;
+}
+
+    .header h2 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+.orderbtn {
+    position: relative;
+    right: 20px;
+    bottom: 10px;
+    float: right;
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+.content {
+    width: 960px;
+    padding: 20px 0px;
+}
+
+.leftcontent {
+    width: 420px;
+    float: left;
+    padding-left: 30px;
+    padding-right: 20px;
+    display: block;
+}
+
+.rightcontent {
+    width: 450px;
+    float: right;
+    display: block;
+    padding-left: 40px;
+    /*background-color:#736F6E;*/
+}
+
+
+.footer {
+    margin-bottom: 100px;
+}
+
+.leftfooter {
+    width: 478px;
+    float: left;
+}
+
+.rightfooter {
+    width: 478px;
+    float: right;
+}
+
+
+/*.footerbutton {
+    overflow:hidden;
+    padding:30px 0px;
+}*/
+
+#paybtn {
+    padding: 0;
+    margin: 0;
+    background-color: #6d0cc3;
+    color: white;
+    text-align: center;
+    float: left;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+#orderplacedbtn {
+    padding: 0;
+    margin: 0;
+    background-color: #00ff21;
+    color: black;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    float: right;
+    margin-right: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+
+.label {
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 0px 10px 0px 0px;
+}
+
+.bar {
+    width: 365px;
+    height: 22px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.card, .cash {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #fff;
+}
+
+.leftcontent h3 {
+    padding: 0;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.appetiser {
+    margin: 5px 0px;
+    overflow: hidden;
+}
+
+    .appetiser h2 {
+        font-size: 25px;
+    }
+
+    .appetiser ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .appetiser ul li {
+        }
+
+
+.icon {
+    padding: 3px;
+    color: white;
+    background-color: #ea1290;
+    border-radius: 15px;
+    text-align: center;
+    /*margin:0px 20px;*/
+}
+
+
+/*=====*/
+
+.item {
+    width: 180px;
+    float: left;
+}
+
+.iconDiv {
+    width: 40px;
+    float: left;
+}
+
+.labelDiv {
+    width: 110px;
+    float: left;
+}
+
+.price {
+    width: 80px;
+    float: left;
+    text-align: right;
+    padding-right: 35px;
+}
+
+
+.label1 {
+    background-color: #f00;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.label2 {
+    background-color: #f7f201;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.label3 {
+    background-color: #00ff21;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+
+.summary {
+    margin: 20px 0px;
+}
+
+#total {
+    padding: 0;
+    margin: 0;
+    float: left;
+    font-size: 16px;
+    color: black;
+}
+
+#totalprice {
+    padding-right: 10px;
+    margin: 0;
+    color: black;
+    text-align: right;
+    float: right;
+    margin-right: 30px;
+    font-size: 16px;
+}
+
+#redIcon {
+    position: absolute;
+    top: 237px;
+    right: 590px;
+    padding: 5px;
+    text-align: center;
+    color: wheat;
+    width: 15px;
+    height: 15px;
+    background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}

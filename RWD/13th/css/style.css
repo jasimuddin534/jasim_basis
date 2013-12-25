@@ -1,0 +1,59 @@
+*{margin: 0; padding: 0;}
+
+p{margin-bottom: 15px; padding-left:10px;}
+h3 {padding-left:10px;
+}
+
+body {
+}
+
+.fixed{overflow: hidden;}
+.floatLeft{float: left;}
+.floatRight{float: right;}
+
+.main{width: 980px; margin: 20px auto;}
+.header {}
+.header h1{font-size: 50px; font-weight:normal; font-style:normal;margin-bottom:10px;}
+.header h2{}
+
+.redhedding{font-size: 30px; color: red;font-weight:normal; font-style:normal;margin-bottom:10px; margin-top:10px}
+
+.introduc, .mobile, .full, .ceasefire {border-bottom:1px groove; margin-bottom:20px; margin-top:50px;}
+
+.introducText{width: 470px;padding: 20px;}
+.introducDig{width: 460px;}
+.introducDig img{width: 460px; padding:20px 0px;}
+
+.mobileDig{width: 440px; padding: 15px 15px 0px 15px;}
+.mobileText{width: 480px; padding: 15px 15px 0px 15px;}
+
+.fullDig{}
+.fullDig img{width: 980px;}
+
+.fullText{width: 450px; padding: 20px;}
+
+
+.ceasefireList ul{margin: 0; padding: 0; list-style: none;}
+    .ceasefireList ul li {padding:5px;
+    }
+.sPic{width: 100px; display:block; height:150px;}
+.sPic img {width: 100px; border-radius:20px; }
+.sText{width: 870px; display:block; height:150px;}
+
+
+.middeltext {overflow:hidden;
+}
+
+
+.lPic{width: 100px; display:block; height:200px;}
+.lPic img {width: 100px;}
+.lText{width: 870px; display:block; height:200px;}
+
+
+.dPic{width: 100px; display:block; height:220px;}
+.dPic img {width: 100px;height:200px;}
+.dText {
+    width: 870px;
+    display: block;
+    height: 220px;
+}

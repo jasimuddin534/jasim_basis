@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Frutiger Neue W02 Book', Arial, sans-serif;
+    background: #887766;
+}
+
+.fixed {
+    overflow: hidden;
+}
+
+.maincontent {
+    margin: 0px auto;
+}
+
+
+.hederarea {
+}
+
+
+#yellowCircle {
+    position: relative;
+    background: #ffd800;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    border-radius: 80px;
+}
+
+    #yellowCircle h2 {
+        text-align: center;
+        font-style: normal;
+    }
+
+
+
+#fuchsiaCircle {
+    position: relative;
+    background: #FF00FF;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    border-radius: 80px;
+}
+
+    #fuchsiaCircle h2 {
+        text-align: center;
+        font-style: normal;
+    }
+
+
+
+.numberCircle {
+    background: #000000;
+    color: white;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+}
+
+    .numberCircle h2 {
+        text-align: center;
+        font-style: normal;
+    }
+
+
+.footerarea {
+    /*clear: both;*/
+    height: 30px;
+}
+
+.titlearea {
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+    .titlearea h1 {
+        color: white;
+    }
+
+.tableNo1, .tableNo2, .tableNo3, .tableNo4,.getNo1, .getNo2, .getNo3, .getNo4 {
+    position: relative;
+}
+
+
