@@ -87,6 +87,25 @@ http://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
 http://snook.ca/archives/html_and_css/font-size-with-rem
 http://craigmod.com/bibliotype/demo/
 
-11th
-================================
-http://www.unistorgroup.com/uploads/documents/OReilly.JavaScript.The.Good.Parts.May.2008.pdf
+
+11th class
+========================
+http://www.unistorgroup.com/uploads/documents/OReilly.JavaScript.The.Good.Parts.May.2008.pd
+
+f
+
+12th class
+=====================
+http://www.quirksmode.org/js/contents.html
+
+
+
+13th class
+=====================
+http://jasim.zadid.net/jasim_basis/exercise/index.html
+http://jasim.zadid.net/jasim_basis/exercise/form.html
+
+
+14th class
+======================
+http://css-tricks.com/which-responsive-images-solution-should-you-use/
