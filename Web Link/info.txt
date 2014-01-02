@@ -1,3 +1,27 @@
+3rd class
+=============================
+
+zadid.rusdid
+
+rusdid@gmail.com
+
+http://103.21.41.107:8080/
+
+basis
+
+basis2013
+
+
+server info of Zadid
+-------------------------
+URL : jasim.zadid.net
+User Name : basisjasimuddin534
+Password : 
+
+
+
+
+
 4th class
 =========================
 http://www.w3.org/TR/css3-selectors/
@@ -34,8 +58,32 @@ http://learnlayout.com/position-example.html
 
 8th Class
 ====================
-http://pastebin.com/qEyU3v5y
-http://pastebin.com/niUWGAjA
-http://jasim.zadid.net/jasim_basis/exam1.html
-http://jasim.zadid.net/jasim_basis/exam2.html
-http://moinul.zadid.net/day8.html
+Exam: This is exam link
+http://jasim.zadid.net/jasim_basis/exam/exam1.html
+http://jasim.zadid.net/jasim_basis/exam/exam2.html
+
+
+
+9th class
+========================
+Responsiv web site :
+http://www.barackobama.com/#get-the-facts
+
+http://pastebin.com/YQfhBqNU
+
+Tools : 
+http://validator.w3.org/
+
+http://foundation.zurb.com/
+http://getbootstrap.com/
+http://960.gs/
+
+
+10th
+=========================
+http://ia.net/blog/responsive-typography-the-basics/
+http://www.w3.org/TR/css3-values/#viewport-relative-lengths/
+http://www.ipsum-generator.com/
+http://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://craigmod.com/bibliotype/demo/

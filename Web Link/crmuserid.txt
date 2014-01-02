@@ -1,0 +1,30 @@
+jasimuddin534@gmail.com
+Panacea123
+
+
+http://localhost:4243/Calls/Calls.aspx?ShowPanel=ViewPanel
+http://localhost:4243/Notes/Notes.aspx?ShowPanel=ViewPanel
+
+
+http://www.dls.gov.bd/
+
+
+C3
+=============================
+http://192.168.1.100:8088/
+User Name : demo@c3.com.bd
+Password : Demo1234
+
+
+TimeTrex
+=============================
+http://192.168.1.147:8080/
+User Name : jasim.uddin
+Password : Jasim1234
+
+
+B2M
+=============================
+http://192.168.1.100:8081/
+User Name : jakia.mun
+Password : jakia123

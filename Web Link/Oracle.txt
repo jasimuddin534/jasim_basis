@@ -1,0 +1,4 @@
+11g Setup on Win 07
+===================
+http://www.obfp.vt.edu/SCOOP/Windows%207%20Oracle%20Install.pdf
+http://blog.mclaughlinsoftware.com/2009/11/27/oracle-11g-on-windows-7/

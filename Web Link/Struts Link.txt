@@ -4,10 +4,3 @@ http://r4r.co.in/java/struts/basic/tutorial/Example-2/
 http://r4r.co.in/java/struts/basic/tutorial/Example%2010/
 http://r4r.co.in/java/struts/basic/tutorial/Example-8/
 http://r4r.co.in/java/struts/basic/tutorial/Example%2012/
-
-
-
-http://viralpatel.net/blogs/struts-validation-framework-tutorial-example-validator-struts-validation-form-validation/
-http://www.mkyong.com/struts/struts-validator-framework-example/
-http://www.coderanch.com/t/593800/Struts/Struts-Validation
-http://stackoverflow.com/questions/16788423/validate-form-before-submitting-jsp

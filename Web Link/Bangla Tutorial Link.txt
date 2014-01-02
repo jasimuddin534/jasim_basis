@@ -1,4 +1,0 @@
-http://tutorialbd.com/blog/
-http://tutorialbd.com/jquery/
-http://tutorialbd.com/css/
-http://tutorialbd.com/javascript/

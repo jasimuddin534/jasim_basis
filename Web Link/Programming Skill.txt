@@ -1,0 +1,37 @@
+Programming Skill:
+Client Side:
+Markup : HTML, XHTML, XML
+Scripting: JS, OOP JS, AJAX, JSON, DOM
+Frame Work: ExtJS-4.1.x, jQuery-1.8.x, Apache Flex
+Style Sheet: CSS, XSLT
+Server Side:
+Markup: GSP, JSP, Struts-2.x, JSF-2.x, Facelet-2.x
+Scripting: DSL, JSTL, JSP, JSF-2.x, Free marker
+API: Collection, JDBC, JPA, JTA, Mail, JSAS, JAZN, JMS, JMX
+Protocol: HTTP, FTP, TFTP, SSL, SSH, SAMBA, SMTP, POP, IMAP
+Language: Groovy-1.8.x , JAVA-1.6.x (J2SE, J2EE), PL/SQL
+SQL: SQL, SQL Tuning, Stored Procedures, Function, Triggers
+Frame Work: Grails-2.x, Spring-3.x (MVC, Security), Struts-2.x, Seam-2.2.x
+Security: Spring Security-3.x, Seam Security -2.2.x
+Web Service: WSDL, AXIS, REST, RSS, Atom, SOA
+Server: Tomcat-6.20, JBossAS-7.xXAMPP 1.7, GAE
+RDMS: MySQL 5.x, Oracle 10g, PostgreSQL 9.x, MS SQL -2005
+ORM: GORM-2.x , Hibernate-3.6.x~4
+IDE:
+Programming: Eclipse-3.7, NetBeans-7.x , Notepad++
+Reporting: iReport-4.x
+Designing: Adobe Dreamweaver CS4, Photoshop CS4
+SQL: SQLPlus, SQL Developer, PHPMyAdmin, PHPPgAdmin
+Source Control: GiT, SVN, CVS, CVSNT,
+Build: Apache Maven, Apache Ant, Make
+Optional Skill:
+Programming: OOP PHP 5.3x , Ruby-1.9, Perl-5.X, Python -2.7.x
+MVC: Symfony-2.x, Rails-3.x, ASP C#.Net MVC 3
+ORM: Toplink, EclipseLink, Doctrine-2.x, Propel-2.x,
+Modeling: Unified Modeling Language (UML)
+OS: Ubuntu -11.X, CentOS-6.x, RHEL-6.x
+
+
+
+
+http://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a

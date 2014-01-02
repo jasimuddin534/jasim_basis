@@ -1,0 +1,2 @@
+Url : login.microsoftonline.com
+User : jasim.uddin@panaceasystems.onmicrosoft.com
