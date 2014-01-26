@@ -1,0 +1,8 @@
+http://peak.telecommunity.com/DevCenter/PythonEggs
+https://pythonhosted.org/setuptools/easy_install.html#downloading-and-installing-a-package
+https://pypi.python.org/pypi/setuptools
+https://pypi.python.org/pypi/setuptools#downloads
+http://www.diveintopython.net/installing_python/source.html
+http://docs.python.org/2/using/windows.html
+http://www.kothay.com/blog/post/1-1354535421-43/
+

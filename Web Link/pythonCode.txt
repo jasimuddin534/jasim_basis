@@ -1,0 +1,171 @@
+
+C:\Users\Administrator>cd ..
+
+C:\Users>cd
+C:\Users
+
+C:\Users>mkdir python
+
+C:\Users>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users>dir
+ Volume in drive C has no label.
+ Volume Serial Number is EC7B-5852
+
+ Directory of C:\Users
+
+01/23/2014  03:48 PM    <DIR>          .
+01/23/2014  03:48 PM    <DIR>          ..
+01/23/2014  03:43 PM    <DIR>          Administrator
+10/23/2013  05:37 PM    <DIR>          c3
+10/22/2013  01:00 PM    <DIR>          Classic .NET AppPool
+01/30/2013  05:36 PM    <DIR>          commander
+10/26/2013  11:47 AM    <DIR>          DefaultAppPool
+12/31/2013  12:15 PM    <DIR>          jasim.uddin
+06/20/2012  12:39 PM    <DIR>          Lenovo
+08/25/2013  12:13 PM    <DIR>          mostofa.mahmud
+03/05/2013  11:30 AM    <DIR>          MsDtsServer110
+06/11/2013  12:17 PM    <DIR>          MSSQLFDLauncher
+12/24/2012  05:06 PM    <DIR>          MSSQLSERVER
+12/24/2012  05:07 PM    <DIR>          MSSQLServerOLAPService
+03/04/2013  04:37 PM    <DIR>          Public
+01/23/2014  03:48 PM    <DIR>          python
+12/03/2013  03:54 PM    <DIR>          rashel.ahmed
+12/24/2012  05:07 PM    <DIR>          ReportServer
+               0 File(s)              0 bytes
+              18 Dir(s)   7,194,624,000 bytes free
+
+C:\Users>cd python
+
+C:\Users\python>python
+Python 2.7.6 (default, Nov 10 2013, 19:24:18) [MSC v.1500 32 bit (Intel)] on win
+32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 2+2
+4
+>>> 2**2
+4
+>>> def square(x):
+...     return x**2
+...
+>>> print square(4)
+16
+>>> def square(x):
+...     return x**2
+...
+>>> print square([1,2,4,5,6,7,8])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in square
+TypeError: unsupported operand type(s) for ** or pow(): 'list' and 'int'
+>>> print square(4)
+16
+>>> if 4 % 2 ==0 :
+...    return True
+... else:
+...    return False
+...
+  File "<stdin>", line 2
+SyntaxError: 'return' outside function
+>>> if 4 % 2 ==0 :
+...     print 't'
+... else:
+...     print 'f'
+...
+t
+>>>
+>>> ^Z
+
+
+C:\Users\python>python firstt.py
+Hello World.
+
+C:\Users\python>
+
+C:\Users\python>python firstt.py
+Hello World.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+C:\Users\python>python firstt.py
+Hello World.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+90
+
+C:\Users\python>python firstt.py
+Hello World.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+90
+
+C:\Users\python>python firstt.py
+Hello World.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+90
+
+C:\Users\python>python firstt.py
+  File "firstt.py", line 12
+    return mar
+             ^
+IndentationError: unindent does not match any outer indentation level
+
+C:\Users\python>python firstt.py
+  File "firstt.py", line 12
+    return mar
+             ^
+IndentationError: unindent does not match any outer indentation level
+
+C:\Users\python>python firstt.py
+Hello World.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+90
+70
+30
+None
+
+C:\Users\python>
