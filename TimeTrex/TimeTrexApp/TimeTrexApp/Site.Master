@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TimeTrexApp.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/css/boilerplate.css">
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />
+    <script type="text/javascript" src="/Scripts/less-1.3.3.min.js"></script>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="~/Scripts/main.js" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="container-main">
+            <div class="wrapper">
+                <header>
+                    <div class="topbar">
+                        <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
+                            <AnonymousTemplate>
+                                <ul>
+                                    <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
+                                    <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
+                                </ul>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <p>
+                                    Hello, <a id="A1" runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                                        <asp:LoginName ID="LoginName1" runat="server" CssClass="username" />
+                                    </a>|
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                </p>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </div>
+                    <div class="logo">
+                        Time<span>Trex</span>
+                    </div>
+                </header>
+                <nav>
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="TimeSheetLinkButton" runat="server">Attendance</asp:LinkButton>
+                            <ul>
+                                <li>
+                                    <asp:LinkButton ID="AllTimeSheetLinkButton" runat="server" PostBackUrl="~/Admin/Attendance/Attendance.aspx">All TimeSheet</asp:LinkButton>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="MyTimeSheetLinkButton" runat="server" PostBackUrl="~/Attendance/Attendance.aspx">My TimeSheet</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="EmployeesLinkButton" runat="server">Employees</asp:LinkButton>
+                            <ul>
+                                <li>
+                                    <asp:LinkButton ID="AllEmployeeLinkButton" runat="server" PostBackUrl="~/Admin/Employee/Employee.aspx">Employee List</asp:LinkButton></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="body">
+                    <div class="content">
+                        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer-text">
+                        Copyright &copy; 2013. All rights reserved.
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

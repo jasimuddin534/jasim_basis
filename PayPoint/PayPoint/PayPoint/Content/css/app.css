@@ -1,0 +1,419 @@
+/* line 12, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\mixins.less */
+.clearfix {
+  *zoom: 1;
+}
+/* line 14, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\mixins.less */
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\mixins.less */
+.clearfix:after {
+  clear: both;
+}
+/* line 106, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\mixins.less */
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/* line 154, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\mixins.less */
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 20px + 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 4, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 10, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+/* line 15, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 20, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+a:focus {
+  outline: 0;
+}
+/* line 42, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+/* line 46, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .sidenav {
+  width: 180px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #333333;
+  position: absolute;
+  z-index: 2000;
+  border-right: 2px solid #2a2a2a;
+}
+/* line 56, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .main {
+  margin-left: 180px;
+  position: relative;
+  z-index: 1000;
+  width: auto;
+  height: 100%;
+}
+/* line 62, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .main section {
+  padding-left: 1em;
+  padding-right: 1em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  overflow-y: auto;
+}
+/* line 70, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .main section.active {
+  left: 0;
+}
+/* line 73, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .main section .content-sidebar {
+  padding-right: 2em;
+}
+/* line 76, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .main section .content-body {
+  overflow: auto;
+}
+/* line 87, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .sidenav {
+  font-weight: 300;
+}
+/* line 91, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .sidenav ul.nav li a {
+  padding: 25px 20px 25px 50px;
+  margin: 0;
+  color: #dddddd;
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+/* line 98, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .sidenav ul.nav li a:focus,
+.wrapper > .sidenav ul.nav li a:hover {
+  background-color: #1a1a1a;
+}
+/* line 102, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .sidenav ul.nav li a span {
+  position: absolute;
+  left: 1em;
+  top: 2px;
+  height: 60px;
+  width: 60px;
+  /*overflow: hidden;*/
+}
+/* line 110, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.wrapper > .sidenav ul.nav li a i {
+  color: #4d4d4d;
+  float: left;
+  text-align: right;
+  font-size: 2.5em;
+  margin-right: 15px;
+  display: block;
+  position: relative;
+  top: 12.5px;
+  left: -0.25em;
+}
+/* line 126, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.text-center {
+  text-align: center;
+}
+/* line 130, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.text-italic {
+  font-style: italic;
+}
+/* line 134, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.full {
+  width: 100%;
+}
+/* line 138, C:\Users\admin\My Projects\DefaultCollection\C3\C3vNext\C3vNext\Content\less\app.less */
+.table {
+  overflow: auto;
+}
+
+/* Custom */
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.table.clean tr td {
+    border: none !important;
+}
+
+.content-body, .content-sidebar {
+    margin-top: 20px;
+}
+
+.main {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+    .main.nopad {
+        margin-left: 0;
+    }
+
+.wrapper > .main section .content-sidebar.right {
+    padding-right: 0;
+    padding-left: 2em;
+}
+
+table.table thead {
+    background-color: #EEE;
+}
+.wrapper > .sidenav ul.nav li a {
+    font-size: 1em;
+    padding: 1em 1em 1em 4em;
+    color: #888;
+}
+.wrapper > .sidenav ul.nav li a i {
+  color: #eee;
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
+  margin-right: 15px;
+  display: block;
+  position: relative;
+  /*top: 12.5px;
+  left: -0.25em;*/
+}
+
+    .wrapper > .sidenav ul.nav li a span {
+        padding-left: .5em;
+    }
+
+.product-create .form-add-btn {
+    margin: 0 1em;
+}
+
+.receipt {
+    font-family: "Arial", sans-serif;
+    background-color: white;
+}
+
+.table-receipt tbody tr td:nth-child(2) {
+    text-align: center;
+}
+.table-receipt tbody tr td:nth-child(3) {
+    text-align: right;
+}
+
+.table-receipt tfoot tr td{
+    margin-top: 1em;
+}
+.table-recipt tfoot tr td:nth-child(2) {
+    text-align: right;
+}
+
+.table-receipt-total tr td:first-child {
+    /*font-weight: bolder;*/
+    text-align: right;
+}
+.table-receipt-total tr td:last-child {
+    text-align: right;
+}
+
+.wrapper > .sidenav ul.nav li a span {
+}
+.wrapper > .sidenav ul.nav li a i {
+    font-size: 1.75em;
+    margin-top: -.2em;
+    margin-left: .15em;
+}
+
+@media print {
+    .span-receipt {
+        width: 100%;
+        max-width: 200px;
+    }
+    .well.receipt {
+        border: none;
+        padding: 0;
+        font-size: 12px;
+        line-height: 1em;
+        font-weight: 400;
+    }
+        .well.receipt * {
+            line-height: inherit;
+
+        }
+
+        .well.receipt table.clean.table tr td {
+            /*padding-top: 0;
+            padding-bottom: 0;*/
+        }
+        .well.receipt h4,
+        .well.receipt h6 {
+            font-weight: 400;
+        }
+    .table.table-receipt-memo thead tr th {
+        font-weight: 400;
+    }
+}
+
+.table.table-receipt-memo thead {
+    background-color: transparent;
+    border: 1px dashed #000;
+    border-left: none;
+    border-right: none;
+}
+
+.table.table-receipt-memo tbody td {
+    border: none !important;
+}
+
+.table.table-receipt-total {
+    border: 1px dashed #000;
+    border-left: none;
+    border-right: none;
+}
+
+#print {
+    background-color: #dddddd;
+    color: #555;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    font-size: 30px;
+    text-align: center;
+    margin-left: -25px;
+}
+
+.block-title {
+    font-size: 1.25em;
+    font-weight: 100;
+    color: #2c3e50;
+    
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+body {
+    background-image: url("../../Images/grey_wash_wall.png");
+    background-repeat: repeat;
+}
+
+.login-box {
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 160px;
+    height: auto;
+    margin-left: -150px;
+    overflow: hidden;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    z-index: 1050;
+    background-color: rgba(255,255,255, .65);
+    border: 1px solid #999;
+}
+
+.login-box .logo {
+    display: block;
+    z-index: 1050;
+    padding: 2em 0 1em;
+}
+
+.login-box .logo img {
+}
+
+.login-box form.login {
+    display: block;
+    z-index: 1050;
+    text-align: center;
+    position: relative;
+}
+
+.login-box form.login input[type="text"],
+.login-box form.login input[type="password"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: .5em 1em;
+    background-color: #eee;
+}
+
+    .login-box form.login input[type="text"] {
+        border-radius: .5em .5em 0 0;
+        -webkit-border-radius: .5em .5em 0 0;
+        -moz-border-radius: .5em .5em 0 0;
+    }
+
+    .login-box form.login input[type="password"] {
+        border-radius: 0 0 .5em .5em;
+        -webkit-border-radius: 0 0 .5em .5em;
+        -moz-border-radius:  0 0 .5em .5em;
+    }
+
+.login-box form.login input.signin {
+    background-color: #de1c4c;
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    color: #fff;
+    display: inline-block;
+    width: 206px;
+    margin: 1em 0;
+}
+
+.login-box form.login input.forgot {
+    background-color: #e8e8e8;
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    color: #000;
+    display: inline-block;
+    width: 206px;
+}
+
+    .login-box .errors {
+        width: 206px;
+        margin-bottom: 1em;
+        background-color: #d71e2f;
+        display: inline-block;
+        border-radius: .5em;
+        -webkit-border-radius: .5em;
+        -moz-border-radius: .5em;
+    }
+
+        .login-box .errors ul {
+            color: #fff;
+            font-size: .9em;
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+.white {
+    background-color: white !important;
+    background-image: none !important;
+}

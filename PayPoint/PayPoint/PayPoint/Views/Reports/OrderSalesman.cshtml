@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "OrderSalesman";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (@User.Identity.IsAuthenticated)
+{
+    
+     <section id="list" class="active">
+        <div class="row-fluid">
+            <div class="span12">
+               <div class="page-header" style="position: relative">
+                    <img src="~/Images/plinc-logo.png" style="position: absolute; top: 10px; right: 10px;" />
+                    <h3>@ViewBag.Title</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="row-fluid">
+             <div class="span12">
+                 <div class="row-fluid">
+                     <div class="span4">
+                         @using (Html.BeginForm())
+                         {
+                             
+                             <table id="table1" class="table table-bordered" style="width: 95%">
+                               
+                                 <tr>
+                                     <td>From Date</td>
+                                     <td>
+                                         <input type="date" value="@ViewBag.from" name="fromdate" id="fromdate" />
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>To Date</td>
+                                     <td>
+                                         <input type="date" value="@ViewBag.to" name="todate" id="todate" />
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td colspan="2">
+                                         <a href="/reports" class="btn">Back</a> &nbsp;&nbsp;
+                                        
+                                         <input type="submit" value="Submit" class="btn" />
+                                     </td>
+                                 </tr>
+
+                             </table>
+                        }
+                     </div>
+
+                     <div class="span8">
+
+                         <table class="table table-bordered">
+                             <tr style="background-color: #ddd">
+
+                           
+                                 <th>Date</th>
+                                 <th>Invoice No.</th>
+                                 <th>Product Type</th>
+                                 <th>Brand</th>
+                                 <th>Model</th>
+                                 <th>Barcode</th>
+                                 <th>Price</th>
+                                 <th>Salesman</th>
+                             </tr>
+
+
+                        @{
+                                  
+                                var ptypes = new String[1];
+                                var pbrands = new String[1];
+                                var pmodels = new String[1];
+
+                                if (ViewBag.prodbrands != null)
+                                {
+                                    pbrands = ViewBag.prodbrands.Split(',');
+                                }
+
+                                if (ViewBag.prodmodels != null)
+                                {
+                                    pmodels = ViewBag.prodmodels.Split(',');
+                                }
+
+                                if (ViewBag.prodtypes != null)
+                                {
+                                    ptypes = ViewBag.prodtypes.Split(',');
+                                }
+                                
+                                
+                               
+                                int i = 0;
+
+                             foreach (var item in ViewBag.orders)
+                             {
+                       
+                                 <tr>
+                                    
+                                     <td>@item.CreatedTime</td>
+                                     <td>@item.OrderNumber</td>
+
+                                     <td>@ptypes[i]</td>
+                                     <td>@pbrands[i]</td>
+                                     <td>@pmodels[i]</td>
+
+                                     <td>@item.BarCode </td>
+                                     <td>@item.Price </td>
+                                     <td>@item.CreatedBy </td>
+                                 </tr>
+                                    
+                                 i = i + 1;
+                            }
+                        }
+
+
+                         </table>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+    </section>
+    }
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+       
+<script type="text/javascript">
+         $(document).ready(function () {
+             $(".wrapper").addClass("white");
+         });
+    </script>
+
+    }
+}

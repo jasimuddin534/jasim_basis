@@ -1,0 +1,65 @@
+﻿@model PayPoint.Models.LoginModel
+@{
+    ViewBag.Title = "Point of Sale";
+}
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;
+    }
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="span10">
+            <div class="row-fluid">
+                <div class="span12">
+                    @*<div class="page-header" style="text-align:center">
+                        <h1>@ViewBag.Title</h1>
+                    </div>*@
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12" style="text-align:center" >
+                    @if (@User.Identity.IsAuthenticated)
+                    {
+                        <h4>Welcome to PayPoint</h4>
+                        
+                       <img src="~/Images/plinc-logo.png" style="position: absolute; top: 10px; right: 10px;" />
+                        
+                        
+                        @*var id = Request.QueryString["ReturnUrl"];
+
+                        <span>@id</span>*@
+                        
+                       
+                    }
+                else
+                {
+                    <div class="row-fluid">
+                        <div class="span12" style="position: relative">
+                                @Html.Partial("_Login")
+                        </div>
+                      @*<div class="span6">
+                            <div class="" id="registerPanel">
+                                @Html.Partial("_Register")
+                            </div>
+                        </div>*@
+                    </div>
+                }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/todo")
+    }
+}

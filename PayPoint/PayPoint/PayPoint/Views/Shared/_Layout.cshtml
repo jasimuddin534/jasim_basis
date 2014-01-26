@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - PayPoint</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @*<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>*@
+    @*Styles.Render("~/Content/css")
+    Scripts.Render("~/bundles/modernizr")
+    Styles.Render("~/Content/themes/base/css")*@
+    <link type="text/css" rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/bootstrap-responsive.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/flatboot.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/app.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/font-awesome.css" />
+    <script type="text/javascript" src="~/Content/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        function loadSectionList() {
+            $("section#list").animate({
+                'left': '0%'
+            }, 750, function () {
+                $(this).addClass('active');
+            });
+            $("section#form").animate({
+                'left': '100%'
+            }, 750, function () {
+                $(this).removeClass('active');
+            });
+        }
+
+        function loadSectionForm() {
+            $("section#form").animate({
+                'left': '0%'
+            }, 750, function () {
+                $(this).addClass('active');
+            });
+            $("section#list").animate({
+                'left': '-100%'
+            }, 750, function () {
+                $(this).removeClass('active');
+            });
+        }
+    </script>
+
+    @*<div id="left-panel" class="left-panel">
+        <nav class="nav vertical">
+            <ul>
+                <li><a href="#"><i class="icon-plus-circled"></i></a></li>
+                <li><a href="#"><i class="icon-users"></i></a></li>
+                <li><a href="#"><i class="icon-calendar"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="body" class="body">*@
+
+    @*<div id="userSettings">
+        @Html.Partial("_UserSettings")
+    </div>*@
+
+    <div class="wrapper">
+
+        @if (@User.Identity.IsAuthenticated)
+        {
+            if (Request.QueryString.Count > 0 && (Request.QueryString["ReturnUrl"] == null && Request.QueryString["Message"]==null))
+            {
+            }
+            else
+            {
+                bool hasLocalAccount = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
+                if (hasLocalAccount)
+                {
+            
+                    <div class="sidenav">
+                        <ul class="nav nav-pills nav-stacked">
+                            @if (Request.IsAuthenticated)
+                            {
+                        
+                                <li><a href="#">Hello,<br>
+                                    @User.Identity.Name</a></li>
+                       
+                            }
+
+               
+                            <li><a href="/home"><span><i class="icon-home"></i></span>Home</a></li>
+
+                            @if (Roles.GetRolesForUser(User.Identity.Name).Contains("Administrator") ||
+                                  Roles.GetRolesForUser(User.Identity.Name).Contains("Finance") ||
+                                Roles.GetRolesForUser(User.Identity.Name).Contains("Manager") ||
+                                Roles.GetRolesForUser(User.Identity.Name).Contains("Management") ||
+                                 Roles.GetRolesForUser(User.Identity.Name).Contains("Stock Supervisor") 
+                                )
+                            {
+                            <li><a href="/products"><span><i class="icon-archive"></i></span>Products</a></li>
+                            }
+                    
+                   
+
+
+                            @if (Roles.GetRolesForUser(User.Identity.Name).Contains("Administrator") || 
+                                Roles.GetRolesForUser(User.Identity.Name).Contains("Finance") ||
+                                Roles.GetRolesForUser(User.Identity.Name).Contains("Manager") ||
+                                Roles.GetRolesForUser(User.Identity.Name).Contains("Management") ||
+                                Roles.GetRolesForUser(User.Identity.Name).Contains("Salesman") 
+                             )
+                            {
+                            <li><a href="/orders"><span><i class="icon-check"></i></span>Orders</a></li>
+                            }
+                    
+              
+
+                            @if (Roles.GetRolesForUser(User.Identity.Name).Contains("Administrator"))
+                            {    
+                                <li><a href="/home/users"><span><i class="icon-user"></i></span>Administration</a></li>
+                            }
+
+
+                            <li><a href="/reports"><span><i class="icon-file-text"></i></span>Reports</a></li>
+                    
+                            <li><a style="bottom:60px;position:absolute;" href="/account/manage"><span><i class="icon-cog"></i></span>Settings</a></li>
+                    
+                            @if (Request.IsAuthenticated)
+                            {
+                                using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+                                {
+                                @Html.AntiForgeryToken()
+                                <li><a style="text-decoration:none;bottom:20px;position:absolute;" href="javascript:document.getElementById('logoutForm').submit()"><span><i class="icon-signout"></i></span>Sign Out</a></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+            
+                }//if has local account
+            
+            } // if no querystring sidebar
+
+        } // if authenticate
+        else
+        {
+        }
+
+         @if (Request.QueryString.Count > 0 && (Request.QueryString["ReturnUrl"] == null && Request.QueryString["Message"]==null))
+            {
+            <div class="main nopad">
+
+                @RenderBody()
+
+            </div>
+             }
+             else
+             {
+            <div class="main">
+
+                @RenderBody()
+
+            </div>
+             }
+
+       
+        
+    </div>
+
+    @*<div class="wrapper-print" style="display:none">
+        @Html.Partial("receipt")
+    </div>*@
+
+    @*</div>
+
+    <footer>
+        <nav>
+            <ul id="menu">
+                <li>@Html.ActionLink("Todo List", "Index", "Home", new { area = "" }, null)</li>
+                <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+            </ul>
+        </nav> 
+        <p>Learn more about <a href="http://go.microsoft.com/fwlink/?LinkId=273732">Single Page Applications</a></p>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+    </footer>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @Scripts.Render("~/bundles/ajaxlogin")
+    <script type="text/javascript" src="~/Content/js/vendor/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

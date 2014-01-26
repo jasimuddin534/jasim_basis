@@ -1,0 +1,265 @@
+﻿@model PayPoint.Models.Order
+@{
+    ViewBag.Title = "Orders";
+}
+
+
+@section scripts{
+    <script type='text/javascript' src="~/Scripts/jquery-1.8.2.js"></script>
+    <script type='text/javascript' src="~/Scripts/knockout-2.2.0.js"></script>
+    <script type='text/javascript' src="~/Scripts/app/order.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $(".wrapper").addClass("white");
+         });
+    </script>
+}
+
+@if (@User.Identity.IsAuthenticated)
+{
+    <section id="list" class="active">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="page-header" style="position: relative">
+                    <img src="~/Images/plinc-logo.png" style="position: absolute; top: 10px; right: 10px;" />
+                    <h1>@ViewBag.Title</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                            <li><a href="#" data-bind="click: $root.viewform, visible: gtest">View Orders</a></li>
+                            <li><a href="/orders" data-bind="click: $root.viewtable, visible: ptest">Create Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <h5 class="block-title">Search Product</h5>
+            <div class="span8">
+                <input type="text" id="txtsearch" data-bind="value: query, valueUpdate: 'afterkeydown'" class="input-block-level" />
+            </div>
+            <div class="span4">
+                <div class="btn-group full">
+                    <a data-bind="click: $root.addLine" href="#" class="btn btn-block btn-info">Search</a>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span8 content-body">
+                <h5 class="block-title">Item Cart</h5>
+                <table id="table1" data-bind="visible: gtest" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>Item</td>
+                            <td>Barcode</td>
+                            <td>Price</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <!--Iterate through an observableArray using foreach-->
+                    <tbody data-bind="foreach: lines">
+                        <tr style="border: solid" id="updtr">
+                            <td><span data-bind="text: item"></span></td>
+                            <td><span data-bind="text: barcode"></span></td>
+                            <td><span data-bind="text: price"></span></td>
+                            <td><a href='#' data-bind='click: $root.removeLine'>Remove</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="span3" >
+                            <h5>Total: <span data-bind='text: grandTotal()'></span></h5>
+                        </td>
+                        <td class="span2" >
+                            <h5>VAT: <input data-bind='value: vat, valueUpdate: "afterkeydown"' class="span6" /> %</h5>
+                        </td>
+                        <td class="span4" >
+                            <h5>Discount: <input data-bind='value: dis, valueUpdate: "afterkeydown"' class="span4"/> tk</h5>
+                        </td>
+                        <td class="span3" >
+                            <h5>Grand Total: <span data-bind='text: finalTotal()' ></span></h5>
+                        </td>
+                    </tr>
+                </table>
+                 <h5 class="block-title">Payment Information</h5>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>
+                            <h5>Received:
+                            <input  data-bind='value: $root.amount, valueUpdate: "afterkeydown"' class="span6"/>
+                            </h5>
+                        </td>
+                        <td>
+                            <h5>Payment Type: &nbsp;
+                            <select  data-bind="options: paymentTypes, value: selectedType" class="span6"></select>
+                            </h5>    
+                        </td>
+                        <td>
+                            <button data-bind='click: $root.save' class="btn btn-danger btn-block btn-large">Make Payment</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="span4 content-sidebar right">
+                <h5 class="block-title">Cash Memo</h5>
+                <div class="well receipt">
+                    <h4 class="text-center">GADGET LIFE</h4>
+                    <p class="text-center">
+                        Shop No 1/1, Husain Plaza<br />
+                        Road 15 (New), Mirpur Road<br />
+                        Dhanmondi, Dhaka
+                    </p>
+                    <table class="table clean">
+                        <tr>
+                            <td><strong>Receipt Number:</strong> 0000</td>
+                            <td class="text-right"><strong>Date:</strong><span data-bind="text: today"></span> @*29-Jun-13 10:23:26 AM*@<br /></td>
+                        </tr>
+                    </table>
+                    <h4 class="text-center">Cash Memo</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: lines">
+                            <tr>
+                                <td><span data-bind="text: item"></span></td>
+                                <td><span data-bind="text: quantity"></span></td>
+                                <td><span data-bind="text: subtotal()"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table clean table-receipt-total">
+                        <tr>
+                            <td>Total:</td>
+                            <td><span data-bind='text: grandTotal()'></span></td>
+                        </tr>
+                        <tr>
+                            <td>VAT:(<span data-bind="text: vat"></span>)%</td>
+                            <td><span data-bind="text: avat"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Discount:(<span data-bind="text: dis"></span>)tk</td>
+                            <td><span data-bind="text: adis"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Grand Total:</td>
+                            <td><span data-bind='text: finalTotal()'></span></td>
+                        </tr>
+                        <tr>
+                            <td>Amount Received:</td>
+                            <td><span data-bind="text: amount"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Return Amount:</td>
+                            <td><span data-bind="text: lamount"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Paid in:</td>
+                            <td><span data-bind="text: selectedType"></span></td>
+                        </tr>
+                    </table>
+                    <h5 class="text-center">Thank you for purchasing<br />Please come again<br />Powered By Panacea Systems Ltd. <br /> Contact No. 01762686979</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal hide fade" id="modalAlert">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Return Amount</h3>
+            </div>
+            <div class="modal-body">
+                <p>700$</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary">Ok</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="form">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="page-header" style="position: relative">
+                    <img src="~/Images/plinc-logo.png" style="position: absolute; top: 10px; right: 10px;" />
+                    <h1>@ViewBag.Title</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                            <li><a href="#" data-bind="click: $root.viewform, visible: gtest">View Orders</a></li>
+                            <li><a href="/orders">Create Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span4 content-sidebar left">
+                <table id="listtable" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>OrderNumber</td>
+                            <td>Details</td>
+                        </tr>
+                    </thead>
+                    <!--Iterate through an observableArray using foreach-->
+                    <tbody data-bind="foreach: UnqOrders">
+                        <tr style="border: solid" id="lpdtr">
+                            <td><span data-bind="text: name"></span></td>
+                            <td><a href='#' data-bind='click: $root.detailOrder'>Details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                </div>
+            <div class="span8 content-body">
+
+                <table id="detailstable" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            @*<td>OrderId</td>*@
+                            <td>OrderNumber</td>
+                            <td>Item</td>
+                            <td>Quantity</td>
+                            <td>Barcode</td>
+                            @*<td>Discount</td>*@
+                            <td>Status</td>
+                            <td>Payment Type</td>
+                        </tr>
+                    </thead>
+                    <!--Iterate through an observableArray using foreach-->
+                    <tbody data-bind="foreach: Orders, visible: odetails">
+                        <tr style="border: solid" id="dpdtr">
+                            @*<td><span data-bind="text: orderId"></span></td>*@
+                            <td><span data-bind="text: orderNumber"></span></td>
+                            <td><span data-bind="text: item"></span></td>
+                            <td><span data-bind="text: quantity"></span></td>
+                             <td><span data-bind="text: barCode"></span></td>
+                            @*<td><span data-bind="text: discount"></span></td>*@
+                            <td><span data-bind="text: status"></span></td>
+                            <td><span data-bind="text: paymentType"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+    
+    </section>
+}
+          

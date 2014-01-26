@@ -1,0 +1,140 @@
+@import "variables";
+@import "mixins";
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+}
+
+* {
+	.box-sizing (border-box);
+}
+
+a {
+	&:focus {
+		outline: 0;
+	}
+}
+
+// ---------
+// Variables
+// ---------
+
+@sidenav-width: 180px;
+@sidenav-back: #333;
+@sidenav-color: #ddd;
+@sidebar-width: 30%;
+@sidebar-back: #f4f4f4;
+@sidebar-color: #111;
+@content-width: 70%;
+@content-back: #fff;
+
+// -------
+// Layouts
+// -------
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	> .sidenav {
+		width: @sidenav-width;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		background-color: @sidenav-back;
+		position: absolute;
+		z-index: 2000;
+		border-right: 2px solid #2a2a2a;
+	}
+	> .main {
+		margin-left: @sidenav-width;
+		position: relative;
+		z-index: 1000;
+		width: auto;
+		height: 100%;
+		section {
+			padding-left: 1em;
+			padding-right: 1em;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 100%;
+			&.active {
+				left: 0;
+			}
+			.content-sidebar {
+				padding-right: 2em;
+			}
+			.content-body {
+				overflow: auto;
+			}
+		}
+	}
+}
+
+// -------
+// Sidenav
+// -------
+
+.wrapper > .sidenav {
+	font-weight: 300;
+	ul.nav {
+		li {
+			a {
+				padding: 25px 20px 25px 50px;
+				margin: 0;
+				color: @sidenav-color;
+				font-size: 1.25em;
+				letter-spacing: 0.1em;
+				position: relative;
+				&:focus,
+				&:hover {
+					background-color: darken(@sidenav-back, 10%);
+				}
+				span {
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 60px;
+					width: 60px;
+					overflow: hidden;
+				}
+				i {
+					color: lighten(@sidenav-back, 10%);
+					float: left;
+					text-align: right;
+					font-size: 2.5em;
+					margin-right: 15px;
+					display: block;
+					position: relative;
+					top: 12.5px;
+					left: -.25em;
+				}
+			}
+		}
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.full {
+	width: 100%;
+}
+
+.table {
+	overflow: auto;
+}

@@ -1,0 +1,128 @@
+﻿@model PayPoint.Models.Order
+@{
+    ViewBag.Title = "Orders";
+}
+
+
+
+@section scripts{
+    <script type='text/javascript' src="~/Scripts/jquery-1.8.2.js"></script>
+    <script type='text/javascript' src="~/Scripts/knockout-2.2.0.js"></script>
+    <script type='text/javascript' src="~/Scripts/app/receipt.js"></script>
+}
+
+
+
+<script>
+    
+    function printpage() {
+        document.getElementById('print').style.visibility = 'hidden';
+        window.print();
+    }
+
+    //$(window).load(function () {
+    //    document.getElementById('print').style.visibility = 'hidden';
+    //    window.print();
+    //    window.close();
+    //});
+</script>
+
+@if (@User.Identity.IsAuthenticated)
+{
+    <button id="print" value="Print this page" onclick="printpage()"><i class="icon-print"></i></button>
+    
+            <div class="span8" style="font-family:'Arial';";>
+                <div class="well receipt">
+                    <p style="text-align:right">Invoice No.<span data-bind="text: receipt"></span></p>
+                    <h4 class="text-center">
+                        <img src="/images/GadgetLife.jpg" alt="Alternate Text" style="width: 320px;"/></h4>
+                    <p class="text-center" style="line-height: 1.4em; font-size: 12px">
+                        Shop No # 1/1, Plot No.#1, Husain Plaza, Road no # 15(New),<br />
+                        Mirpur Road Dhanmondi,Contact No.:+8801614000442, +8801614000443<br />
+                        Email no.gadgetlife@b2m-tech.com
+                    </p>
+                    <table class="table clean table-condensed">
+                        <tr>
+                            <td>Name:<span style="display: inline-block; margin-bottom: 5px"> ........................................</span>
+                            <br>Contact No.:<span> ........................................</span></td>
+                            <td colspan="2" style="text-align:right">Date:<span data-bind="text: today"></span></td>
+                         </tr>
+                    </table>
+                   
+                    @{
+
+                        int i= 1;
+                        
+                    <table border="1" style="border:1px solid black;width:100%;min-height:480px;" class="table-condensed">
+                        <thead>
+                            <tr>
+                                <th style="line-height: 2em;">SL No.</th>
+                                <th style="line-height: 2em;">Item</th>
+                                <th style="line-height: 2em;">Qty</th>
+                                <th style="line-height: 2em;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: lines">
+                            <tr>
+                                <td style="text-align:center;vertical-align:top"><span>@i </span></td>
+                                <td style="vertical-align:top"><span data-bind="text: item"></span></td>
+                                <td style="text-align:center;vertical-align:top"><span data-bind="text: quantity"></span></td>
+                                <td style="text-align:center;vertical-align:top"><span data-bind="text: price"></span></td>
+                               
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                        
+                    }
+                    <br />
+                    <p>Inword:</p>
+                    <table style="border: none !important;" class="table clean table-receipt-total table-condensed">
+                        <tr>
+                            <td>Total</td>
+                            <td>:</td>
+                            <td><span data-bind='text: grandTotal()'></span></td>
+                        </tr>
+                        <tr>
+                            <td>VAT(<span data-bind="text: vat"></span>)%</td>
+                            <td>:</td>
+                            <td><span data-bind="text: avat"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Discount(<span data-bind="text: dis"></span>)tk</td>
+                            <td>:</td>
+                            <td><span data-bind="text: adis"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Grand Total</td>
+                            <td>:</td>
+                            <td><span data-bind='text: finalTotal()'></span></td>
+                        </tr>
+                        <tr>
+                            <td>Amount Received</td>
+                            <td>:</td>
+                            <td><span data-bind="text: amount"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Return Amount</td>
+                            <td>:</td>
+                            <td><span data-bind="text: lamount"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Paid in</td>
+                            <td>:</td>
+                            <td><span data-bind="text: paid"></span></td>
+                        </tr>
+                    </table>
+                    <br />
+                    <br />
+                    <table class="table clean table-condensed">
+                        <tr>
+                            <td><span style="border-top: 2px solid black; padding-top: 5px; display: inline-block;">Customer Signature</span></td>
+                            <td style="text-align:right"><span style="border-top: 2px solid black; padding-top: 5px; display: inline-block;">Authorized Signature</span></td>
+                         </tr>
+                    </table>
+                     <h6 class="text-center">N.B:Goods once sold will not be Change or Return please check the goods before signing this</h6>
+                </div>
+            </div>
+}

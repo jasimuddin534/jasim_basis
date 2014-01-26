@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@if (@User.Identity.IsAuthenticated)
+{
+    
+     <section id="list" class="active">
+        <div class="row-fluid">
+            <div class="span12">
+               <div class="page-header" style="position: relative">
+                    <img src="~/Images/plinc-logo.png" style="position: absolute; top: 10px; right: 10px;" />
+                    <h3>@ViewBag.Title</h3>
+                </div>
+            </div>
+        </div>
+        
+
+         <div class="row-fluid">
+             <div class="span12">
+                 @if (Roles.GetRolesForUser(User.Identity.Name).Contains("Administrator"))
+                 {
+                     <table class="table table-hover table-bordered">
+                         <tr style="background-color: #ddd">
+                             <th style="width: 10%">SL</th>
+                             <th>Reports</th>
+                         </tr>
+                         <tr>
+                             <td>1</td>
+                             <td><a style="color: black" href="/reports/order">Generate Report from <span style="color: red">Orders</span> by <b>Date Range</b> and/or <b>Salesman</b></a> </td>
+
+                         </tr>
+                         <tr>
+                             <td>2</td>
+                             <td><a style="color: black" href="/reports/product">Generate Report from <span style="color: red">Products</span> by <b>Stock in date</b> and/or <b>Product type</b> and/or <b>Brand</b></a></td>
+
+                         </tr>
+                         <tr>
+                             <td>3</td>
+                             <td><a style="color: black" href="/reports/productout">Generate Report from <span style="color: red">Products</span> by <b>Stock out date</b> and/or <b>Product type</b> and/or <b>Brand</b></a></td>
+
+                         </tr>
+                     </table>
+                  }
+                  @if (Roles.GetRolesForUser(User.Identity.Name).Contains("Stock Supervisor"))
+                  {
+                      <table class="table table-hover table-bordered">
+                         <tr style="background-color: #ddd">
+                             <th style="width: 10%">SL</th>
+                             <th>Reports</th>
+                         </tr>
+                        
+                         <tr>
+                             <td>1</td>
+                             <td><a style="color: black" href="/reports/product">Generate Report from <span style="color: red">Products</span> by <b>Stock in date</b> and/or <b>Product type</b> and/or <b>Brand</b></a></td>
+
+                         </tr>
+                         
+                     </table>
+                  }
+                  @if ( Roles.GetRolesForUser(User.Identity.Name).Contains("Finance") ||
+                        Roles.GetRolesForUser(User.Identity.Name).Contains("Management") 
+                      )
+                  {
+                      <table class="table table-hover table-bordered">
+                         <tr style="background-color: #ddd">
+                             <th style="width: 10%">SL</th>
+                             <th>Reports</th>
+                         </tr>
+                        
+                         <tr>
+                             <td>1</td>
+                            <td><a style="color: black" href="/reports/productout">Generate Report from <span style="color: red">Products</span> by <b>Stock out date</b> and/or <b>Product type</b> and/or <b>Brand</b></a></td>
+                         </tr>
+                         
+                     </table>
+                  }
+                  @if (Roles.GetRolesForUser(User.Identity.Name).Contains("Manager"))
+                  {
+                      <table class="table table-hover table-bordered">
+                         <tr style="background-color: #ddd">
+                             <th style="width: 10%">SL</th>
+                             <th>Reports</th>
+                         </tr>
+                        
+                         <tr>
+                             <td>1</td>
+                             <td><a style="color: black" href="/reports/order">Generate Report from <span style="color: red">Orders</span> by <b>Date Range</b> and/or <b>Salesman</b></a> </td>
+                         </tr>
+                         
+                     </table>
+                  }
+
+                   @if (Roles.GetRolesForUser(User.Identity.Name).Contains("Salesman"))
+                  {
+                      <table class="table table-hover table-bordered">
+                         <tr style="background-color: #ddd">
+                             <th style="width: 10%">SL</th>
+                             <th>Reports</th>
+                         </tr>
+                        
+                         <tr>
+                             <td>1</td>
+                             <td><a style="color: black" href="/reports/ordersalesman">Generate Report from <span style="color: red">Orders</span> by <b>Date Range</b> </a> </td>
+                         </tr>
+                         
+                     </table>
+                  }
+
+
+             </div>
+         </div>
+
+    </section>
+}
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+       
+<script type="text/javascript">
+         $(document).ready(function () {
+             $(".wrapper").addClass("white");
+         });
+    </script>
+
+    }
+}

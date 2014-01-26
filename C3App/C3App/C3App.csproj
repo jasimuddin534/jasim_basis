@@ -1,0 +1,1498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CA49FBE-F097-468D-8165-3DF33749D889}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>C3App</RootNamespace>
+    <AssemblyName>C3App</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\45\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha">
+      <HintPath>E:\recaptcha-dotnet-1.0.5.0-binary\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\45\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Accounts\AccountDetails.aspx" />
+    <Content Include="Accounts\Accounts.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Activation.aspx" />
+    <Content Include="Administration\ACLRoles\ACLRoleDetails.aspx" />
+    <Content Include="Administration\ACLRoles\ACLRoleList.aspx" />
+    <Content Include="Administration\ACLRoles\ACLRoles.aspx" />
+    <Content Include="Administration\Administration.aspx" />
+    <Content Include="Administration\Dropdown\Dropdown.aspx" />
+    <Content Include="Administration\Modules\Modules.aspx" />
+    <Content Include="App_Data\ErrorLog.txt" />
+    <Content Include="Calls\Calls.aspx" />
+    <Content Include="Campaigns\CampaignDetails.aspx" />
+    <Content Include="Campaigns\CampaignList.aspx" />
+    <Content Include="Campaigns\Campaigns.aspx" />
+    <Content Include="Cases\Cases.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Contacts\ContactDetails.aspx" />
+    <Content Include="Contacts\ContactList.aspx" />
+    <Content Include="Contacts\Contacts.aspx" />
+    <Content Include="Content\images\c3\account.jpg" />
+    <Content Include="Content\images\c3\administration_icon.png" />
+    <Content Include="Content\images\c3\aether_footer_logo.png" />
+    <Content Include="Content\images\c3\bottom-right.png" />
+    <Content Include="Content\images\c3\calendar.jpg" />
+    <Content Include="Content\images\c3\campaign.jpg" />
+    <Content Include="Content\images\c3\case.jpg" />
+    <Content Include="Content\images\c3\cash.png" />
+    <Content Include="Content\images\c3\cheque.png" />
+    <Content Include="Content\images\c3\contact.jpg" />
+    <Content Include="Content\images\c3\credit-card.png" />
+    <Content Include="Content\images\c3\dashboard.jpg" />
+    <Content Include="Content\images\c3\document.jpg" />
+    <Content Include="Content\images\c3\edit-icon.png" />
+    <Content Include="Content\images\c3\email.jpg" />
+    <Content Include="Content\images\c3\invoice.jpg" />
+    <Content Include="Content\images\c3\lead.jpg" />
+    <Content Include="Content\images\c3\logo-medium.png" />
+    <Content Include="Content\images\c3\logo.png" />
+    <Content Include="Content\images\c3\mini_icons\map_marker.png" />
+    <Content Include="Content\images\c3\mini_icons\amount.png" />
+    <Content Include="Content\images\c3\mini_icons\megaphone_tag.png" />
+    <Content Include="Content\images\c3\mini_icons\office_building.png" />
+    <Content Include="Content\images\c3\mini_icons\description.png" />
+    <Content Include="Content\images\c3\mini_icons\id_card.png" />
+    <Content Include="Content\images\c3\mini_icons\document_tag.png" />
+    <Content Include="Content\images\c3\mini_icons\due_amount.png" />
+    <Content Include="Content\images\c3\mini_icons\due_date.png" />
+    <Content Include="Content\images\c3\mini_icons\email.png" />
+    <Content Include="Content\images\c3\mini_icons\hourglass.png" />
+    <Content Include="Content\images\c3\mini_icons\gov_building.png" />
+    <Content Include="Content\images\c3\mini_icons\chat_arrow_right.png" />
+    <Content Include="Content\images\c3\mini_icons\circle_arrow_right.png" />
+    <Content Include="Content\images\c3\mini_icons\calendar_number.png" />
+    <Content Include="Content\images\c3\mini_icons\graph.png" />
+    <Content Include="Content\images\c3\mini_icons\box_number.png" />
+    <Content Include="Content\images\c3\mini_icons\phone.png" />
+    <Content Include="Content\images\c3\mini_icons\star.png" />
+    <Content Include="Content\images\c3\mini_icons\box_tag.png" />
+    <Content Include="Content\images\c3\mini_icons\quantity.png" />
+    <Content Include="Content\images\c3\mini_icons\profile_pages.png" />
+    <Content Include="Content\images\c3\mini_icons\start_date.png" />
+    <Content Include="Content\images\c3\mini_icons\user.png" />
+    <Content Include="Content\images\c3\mini_icons\globe.png" />
+    <Content Include="Content\images\c3\opportunity.jpg" />
+    <Content Include="Content\images\c3\order.jpg" />
+    <Content Include="Content\images\c3\payment.png" />
+    <Content Include="Content\images\c3\product.jpg" />
+    <Content Include="Content\images\c3\setup_company_icon.png" />
+    <Content Include="Content\images\c3\tab-back.png" />
+    <Content Include="Content\images\c3\task.jpg" />
+    <Content Include="Content\images\c3\top-left.png" />
+    <Content Include="Content\images\c3\user.jpg" />
+    <Content Include="Content\images\foundation\orbit\bullets.jpg" />
+    <Content Include="Content\images\foundation\orbit\left-arrow-small.png" />
+    <Content Include="Content\images\foundation\orbit\left-arrow-white-small.png" />
+    <Content Include="Content\images\foundation\orbit\left-arrow-white.png" />
+    <Content Include="Content\images\foundation\orbit\left-arrow.png" />
+    <Content Include="Content\images\foundation\orbit\loading.gif" />
+    <Content Include="Content\images\foundation\orbit\mask-black.png" />
+    <Content Include="Content\images\foundation\orbit\pause-black.png" />
+    <Content Include="Content\images\foundation\orbit\right-arrow-small.png" />
+    <Content Include="Content\images\foundation\orbit\right-arrow-white-small.png" />
+    <Content Include="Content\images\foundation\orbit\right-arrow-white.png" />
+    <Content Include="Content\images\foundation\orbit\right-arrow.png" />
+    <Content Include="Content\images\foundation\orbit\rotator-black.png" />
+    <Content Include="Content\images\foundation\orbit\timer-black.png" />
+    <Content Include="Content\public.css" />
+    <Content Include="Content\themes\base\bootstrap-responsive.css" />
+    <Content Include="Content\themes\base\bootstrap.css" />
+    <Content Include="Content\themes\base\font-awesome-ie7.css" />
+    <Content Include="Content\themes\base\font-awesome.css" />
+    <Content Include="Content\themes\base\font\fontawesome-webfont.svg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\foundation.css" />
+    <Content Include="Content\themes\base\foundation.min.css" />
+    <Content Include="Content\themes\base\images\ajax-loader.gif" />
+    <Content Include="Content\themes\base\images\email_template\bottom-right.png" />
+    <Content Include="Content\themes\base\images\email_template\logo.png" />
+    <Content Include="Content\themes\base\images\email_template\top-left.png" />
+    <Content Include="Content\themes\base\images\loading-dark.gif" />
+    <Content Include="Content\themes\base\images\loading-gray.gif" />
+    <Content Include="Content\themes\base\images\loading-light.gif" />
+    <Content Include="Content\themes\base\images\loading.gif" />
+    <Content Include="Content\themes\base\images\c3_logo_white.png" />
+    <Content Include="Content\themes\base\images\login2_btn_dark.png" />
+    <Content Include="Content\themes\base\images\login_back.png" />
+    <Content Include="Content\themes\base\images\login_btn.png" />
+    <Content Include="Content\themes\base\images\login_btn_dark.png" />
+    <Content Include="Content\themes\base\images\mCSB_buttons.png" />
+    <Content Include="Content\themes\base\images\pin.png" />
+    <Content Include="Content\themes\base\images\recaptcha.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\joyride-2.0.3.css" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.mCustomScrollbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Contracts\Contracts.aspx" />
+    <Content Include="Controls\MenuControl.ascx" />
+    <Content Include="Dashboard\Dashboard.aspx" />
+    <Content Include="DefaultMeeting.aspx" />
+    <Content Include="Documents\Documents.aspx" />
+    <Content Include="DefaultDocuments.aspx" />
+    <Content Include="EmailTemplates\EmailTemplates.aspx" />
+    <Content Include="Errors\DefaultRedirectErrorPage.aspx" />
+    <Content Include="Errors\GenericErrorPage.aspx" />
+    <Content Include="Errors\Http404ErrorPage.aspx" />
+    <Content Include="Errors\HttpErrorPage.aspx" />
+    <Content Include="Invoices\InvoiceTemplates.aspx" />
+    <Content Include="Meetings\Meetings.aspx" />
+    <Content Include="ModuleSelect.aspx" />
+    <Content Include="Notes\Notes.aspx" />
+    <Content Include="OrderDefault.aspx" />
+    <Content Include="Forgot.aspx" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Invoices\Invoices.aspx" />
+    <Content Include="Leads\LeadDetails.aspx" />
+    <Content Include="Leads\LeadList.aspx" />
+    <Content Include="Leads\Leads.aspx" />
+    <Content Include="Opportunities\Opportunities.aspx" />
+    <Content Include="Opportunities\OpportunityDetails.aspx" />
+    <Content Include="Opportunities\OpportunityList.aspx" />
+    <Content Include="Orders\Orders.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="App_MasterPages\base\Main.Master" />
+    <Content Include="App_MasterPages\home\Public.Master" />
+    <Content Include="Payments\Payments.aspx" />
+    <Content Include="Products\Products.aspx" />
+    <Content Include="Public.aspx" />
+    <Content Include="App_Themes\Base\Default.skin" />
+    <Content Include="CompanySetup.aspx" />
+    <EntityDeploy Include="DAL\C3Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>C3Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\C3Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>C3Model.edmx</DependentUpon>
+      <LastGenOutput>C3Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\C3Model.edmx.diagram">
+      <DependentUpon>C3Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\C3Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>C3Model.edmx</DependentUpon>
+      <LastGenOutput>C3Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Content\themes\base\font\OpenSans-Bold.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-BoldItalic.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-ExtraBold.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-Italic.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-Light.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-LightItalic.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-Regular.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-Semibold.ttf" />
+    <Content Include="Content\themes\base\font\OpenSans-SemiboldItalic.ttf" />
+    <Content Include="Content\themes\base\font\fontawesome-webfont.eot" />
+    <Content Include="Content\themes\base\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\themes\base\font\fontawesome-webfont.woff" />
+    <None Include="Properties\PublishProfiles\C3.pubxml" />
+    <None Include="Properties\PublishProfiles\C3Publish.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Quotes\Quotes.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="Reports\Reports.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\foundation.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.joyride-2.0.3.js" />
+    <Content Include="Scripts\jquery.keyfilter.js" />
+    <Content Include="Scripts\jquery.mCustomScrollbar.js" />
+    <Content Include="Scripts\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\jquery.placeholder.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.PrintArea.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\modernizr.foundation.js" />
+    <Content Include="Scripts\Site.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Tasks\Tasks.aspx" />
+    <Content Include="UserLogin.aspx" />
+    <Content Include="UserProfile.aspx" />
+    <Content Include="UserRegister.aspx" />
+    <Content Include="Users\Company.aspx" />
+    <Content Include="Users\Images\Chrysanthemum.jpg" />
+    <Content Include="Users\Images\Chrysanthemum_.jpg" />
+    <Content Include="Users\Images\Desert.jpg" />
+    <Content Include="Users\Images\Hydrangeas.jpg" />
+    <Content Include="Users\Images\Jellyfish.jpg" />
+    <Content Include="Users\Teams.aspx" />
+    <Content Include="Users\UserDetails.aspx" />
+    <Content Include="Users\UserList.aspx" />
+    <Content Include="Users\Users.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\AccountDetails.aspx.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\AccountDetails.aspx.designer.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Accounts.aspx.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Accounts.aspx.designer.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Activation.aspx.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Activation.aspx.designer.cs">
+      <DependentUpon>Activation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ACLRoles\ACLRoleDetails.aspx.cs">
+      <DependentUpon>ACLRoleDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ACLRoles\ACLRoleDetails.aspx.designer.cs">
+      <DependentUpon>ACLRoleDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ACLRoles\ACLRoleList.aspx.cs">
+      <DependentUpon>ACLRoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ACLRoles\ACLRoleList.aspx.designer.cs">
+      <DependentUpon>ACLRoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ACLRoles\ACLRoles.aspx.cs">
+      <DependentUpon>ACLRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ACLRoles\ACLRoles.aspx.designer.cs">
+      <DependentUpon>ACLRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Administration.aspx.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Administration.aspx.designer.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Dropdown\Dropdown.aspx.cs">
+      <DependentUpon>Dropdown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Dropdown\Dropdown.aspx.designer.cs">
+      <DependentUpon>Dropdown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Authentication.cs" />
+    <Compile Include="App_Code\ExceptionUtility.cs" />
+    <Compile Include="App_Code\GridViewTemplate.cs" />
+    <Compile Include="App_Code\MailHelper.cs" />
+    <Compile Include="Administration\Modules\Modules.aspx.cs">
+      <DependentUpon>Modules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Modules\Modules.aspx.designer.cs">
+      <DependentUpon>Modules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Notification.cs" />
+    <Compile Include="BLL\CallBL.cs" />
+    <Compile Include="BLL\CaseBL.cs" />
+    <Compile Include="BLL\DocumentBL.cs" />
+    <Compile Include="BLL\EmailBL.cs" />
+    <Compile Include="BLL\EmailTemplateBL.cs" />
+    <Compile Include="BLL\InvoiceBL.cs" />
+    <Compile Include="BLL\MeetingBL.cs" />
+    <Compile Include="BLL\NoteBL.cs" />
+    <Compile Include="BLL\NotificationBL.cs" />
+    <Compile Include="BLL\OrderBL.cs" />
+    <Compile Include="BLL\PaymentBL.cs" />
+    <Compile Include="BLL\ProductBL.cs" />
+    <Compile Include="BLL\QuoteBL.cs" />
+    <Compile Include="BLL\ReportBL.cs" />
+    <Compile Include="BLL\ShortMessageBL.cs" />
+    <Compile Include="BLL\ShortMessageTemplateBL.cs" />
+    <Compile Include="BLL\TaskBL.cs" />
+    <Compile Include="BLL\TestBL.cs" />
+    <Compile Include="Calls\Calls.aspx.cs">
+      <DependentUpon>Calls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calls\Calls.aspx.designer.cs">
+      <DependentUpon>Calls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cases\Cases.aspx.cs">
+      <DependentUpon>Cases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cases\Cases.aspx.designer.cs">
+      <DependentUpon>Cases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\Contracts.aspx.cs">
+      <DependentUpon>Contracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contracts\Contracts.aspx.designer.cs">
+      <DependentUpon>Contracts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuControl.ascx.cs">
+      <DependentUpon>MenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuControl.ascx.designer.cs">
+      <DependentUpon>MenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Account.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AccountType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ACLAction.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ACLFunction.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ACLRole.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Audit.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BankAccountsInfo.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\C3Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>C3Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\C3Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\C3Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>C3Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Call.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CallRepository.cs" />
+    <Compile Include="DAL\Campaign.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CampaignStatus.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CampaignTarget.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CampaignType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Case.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CasePriority.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CaseRepository.cs" />
+    <Compile Include="DAL\CaseStatus.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Company.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CompanyModule.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CompanyType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Contact.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Country.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CreditCardsInfo.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Currency.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DateFormat.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Deal.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Discount.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Document.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DocumentCategory.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DocumentRepository.cs" />
+    <Compile Include="DAL\DocumentStatus.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DocumentSubcategory.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DocumentTemplate.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Email.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EmailRepository.cs" />
+    <Compile Include="DAL\EmailTemplate.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EmailTemplateRepository.cs" />
+    <Compile Include="DAL\EmailType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Error.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Extension.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ICallRepository.cs" />
+    <Compile Include="DAL\ICaseRepository.cs" />
+    <Compile Include="DAL\IDocumentRepository.cs" />
+    <Compile Include="DAL\IEmailRepository.cs" />
+    <Compile Include="DAL\IEmailTemplateRepository.cs" />
+    <Compile Include="DAL\IMeetingRepository.cs" />
+    <Compile Include="DAL\INoteRepository.cs" />
+    <Compile Include="DAL\INotificationRepository.cs" />
+    <Compile Include="DAL\Invoice.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\InvoicePayTerm.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\InvoiceStage.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IPaymentRepository.cs" />
+    <Compile Include="DAL\IQuoteRepository.cs" />
+    <Compile Include="DAL\IReportRepository.cs" />
+    <Compile Include="DAL\IShortMessageRepository.cs" />
+    <Compile Include="DAL\IShortMessageTemplateRepository.cs" />
+    <Compile Include="DAL\Language.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Lead.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LeadSource.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LeadStatus.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Manufacturer.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Meeting.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MeetingInvitee.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MeetingRepository.cs" />
+    <Compile Include="DAL\MeetingStatus.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MetaData.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Module.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Note.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NoteRepository.cs" />
+    <Compile Include="DAL\Notification.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NotificationRepository.cs" />
+    <Compile Include="DAL\NotificationType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Opportunity.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OpportunitySalesStage.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OpportunityType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Order.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OrderDetail.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OrderStage.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Payment.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PaymentRepository.cs" />
+    <Compile Include="DAL\PaymentTerm.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PaymentType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PricingFormula.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Product.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ProductCategory.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ProductStatus.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ProductType.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Quote.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\QuoteDetail.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\QuoteRepository.cs" />
+    <Compile Include="DAL\QuoteStage.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Report.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ReportColumn.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ReportFilter.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ReportRepository.cs" />
+    <Compile Include="DAL\ShortMessage.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ShortMessageRepository.cs" />
+    <Compile Include="DAL\ShortMessageTemplate.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ShortMessageTemplateRepository.cs" />
+    <Compile Include="DAL\Task.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TaskStatus.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Team.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TeamSet.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TimeFormat.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TimeZone.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\User.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\UserLogin.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspAccountInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspAccountUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspACLRoleInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspACLRoleUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCallInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCallUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCampaignInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCampaignUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCaseInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCaseUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCompanyInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspCompanyUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspContactInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspContactUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspDocumentInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspDocumentUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspEmailInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspEmailTemplateInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspEmailTemplateUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspInvoiceInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspInvoiceUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspLeadInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspLeadUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspMeetingInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspMeetingUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspNotificationInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspOpportunityInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspOpportunityUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspOrderDetailsInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspOrderDetailsUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspOrderInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspOrderUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspPaymentInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspPaymentSelect_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspPaymentUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspProductInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspProductUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspReportInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspReportUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspShortMessageInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspShortMessageTemplateInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspShortMessageTemplateUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspTaskInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspTaskUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspTeamInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspTeamUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspUserInsert_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\uspUserUpdate_Result.cs">
+      <DependentUpon>C3Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultMeeting.aspx.cs">
+      <DependentUpon>DefaultMeeting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultMeeting.aspx.designer.cs">
+      <DependentUpon>DefaultMeeting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\Documents.aspx.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\Documents.aspx.designer.cs">
+      <DependentUpon>Documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultDocuments.aspx.cs">
+      <DependentUpon>DefaultDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultDocuments.aspx.designer.cs">
+      <DependentUpon>DefaultDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplates\EmailTemplates.aspx.cs">
+      <DependentUpon>EmailTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailTemplates\EmailTemplates.aspx.designer.cs">
+      <DependentUpon>EmailTemplates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\DefaultRedirectErrorPage.aspx.cs">
+      <DependentUpon>DefaultRedirectErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\DefaultRedirectErrorPage.aspx.designer.cs">
+      <DependentUpon>DefaultRedirectErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\GenericErrorPage.aspx.cs">
+      <DependentUpon>GenericErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\GenericErrorPage.aspx.designer.cs">
+      <DependentUpon>GenericErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\Http404ErrorPage.aspx.cs">
+      <DependentUpon>Http404ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\Http404ErrorPage.aspx.designer.cs">
+      <DependentUpon>Http404ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\HttpErrorPage.aspx.cs">
+      <DependentUpon>HttpErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\HttpErrorPage.aspx.designer.cs">
+      <DependentUpon>HttpErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\InvoiceTemplates.aspx.cs">
+      <DependentUpon>InvoiceTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoices\InvoiceTemplates.aspx.designer.cs">
+      <DependentUpon>InvoiceTemplates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\Meetings.aspx.cs">
+      <DependentUpon>Meetings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\Meetings.aspx.designer.cs">
+      <DependentUpon>Meetings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleSelect.aspx.cs">
+      <DependentUpon>ModuleSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleSelect.aspx.designer.cs">
+      <DependentUpon>ModuleSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notes\Notes.aspx.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notes\Notes.aspx.designer.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDefault.aspx.cs">
+      <DependentUpon>OrderDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDefault.aspx.designer.cs">
+      <DependentUpon>OrderDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IInvoiceRepository.cs" />
+    <Compile Include="DAL\InvoiceRepository.cs" />
+    <Compile Include="DAL\IOrderRepository.cs" />
+    <Compile Include="DAL\IProductRepository.cs" />
+    <Compile Include="DAL\ITaskRepository.cs" />
+    <Compile Include="DAL\OrderRepository.cs" />
+    <Compile Include="DAL\ProductRepository.cs" />
+    <Compile Include="DAL\TaskRepository.cs" />
+    <Compile Include="DAL\TestRepository.cs" />
+    <Compile Include="Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\Invoices.aspx.cs">
+      <DependentUpon>Invoices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoices\Invoices.aspx.designer.cs">
+      <DependentUpon>Invoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Payments.aspx.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payments\Payments.aspx.designer.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public.aspx.cs">
+      <DependentUpon>Public.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public.aspx.designer.cs">
+      <DependentUpon>Public.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotes\Quotes.aspx.cs">
+      <DependentUpon>Quotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotes\Quotes.aspx.designer.cs">
+      <DependentUpon>Quotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\Tasks.aspx.cs">
+      <DependentUpon>Tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\Tasks.aspx.designer.cs">
+      <DependentUpon>Tasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Teams.aspx.cs">
+      <DependentUpon>Teams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Teams.aspx.designer.cs">
+      <DependentUpon>Teams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_MasterPages\base\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_MasterPages\base\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_MasterPages\home\Public.Master.cs">
+      <DependentUpon>Public.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_MasterPages\home\Public.Master.designer.cs">
+      <DependentUpon>Public.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AccountBL.cs" />
+    <Compile Include="BLL\ACLRoleBL.cs" />
+    <Compile Include="BLL\CampaignBL.cs" />
+    <Compile Include="BLL\ContactBL.cs" />
+    <Compile Include="BLL\LeadBL.cs" />
+    <Compile Include="BLL\OpportunityBL.cs" />
+    <Compile Include="BLL\TeamBL.cs" />
+    <Compile Include="BLL\UserBL.cs" />
+    <Compile Include="Campaigns\CampaignDetails.aspx.cs">
+      <DependentUpon>CampaignDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaigns\CampaignDetails.aspx.designer.cs">
+      <DependentUpon>CampaignDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Campaigns\CampaignList.aspx.cs">
+      <DependentUpon>CampaignList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaigns\CampaignList.aspx.designer.cs">
+      <DependentUpon>CampaignList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Campaigns\Campaigns.aspx.cs">
+      <DependentUpon>Campaigns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaigns\Campaigns.aspx.designer.cs">
+      <DependentUpon>Campaigns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactDetails.aspx.cs">
+      <DependentUpon>ContactDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\ContactDetails.aspx.designer.cs">
+      <DependentUpon>ContactDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactList.aspx.cs">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\ContactList.aspx.designer.cs">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AccountRepository.cs" />
+    <Compile Include="DAL\ACLRoleRepository.cs" />
+    <Compile Include="DAL\CampaignRepository.cs" />
+    <Compile Include="DAL\ContactRepository.cs" />
+    <Compile Include="DAL\IAccountRepository.cs" />
+    <Compile Include="DAL\IACLRoleRepository.cs" />
+    <Compile Include="DAL\ICampaignRepository.cs" />
+    <Compile Include="DAL\IContactRepository.cs" />
+    <Compile Include="DAL\ILeadRepository.cs" />
+    <Compile Include="DAL\IModuleRepository.cs" />
+    <Compile Include="DAL\IOpportunityRepository.cs" />
+    <Compile Include="DAL\ITeamRepository.cs" />
+    <Compile Include="DAL\IUserRepository.cs" />
+    <Compile Include="DAL\LeadRepository.cs" />
+    <Compile Include="DAL\ModuleRepository.cs" />
+    <Compile Include="DAL\OpportunityRepository.cs" />
+    <Compile Include="DAL\TeamRepository.cs" />
+    <Compile Include="DAL\TemporaryDB.cs" />
+    <Compile Include="DAL\UserRepository.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Leads\LeadDetails.aspx.cs">
+      <DependentUpon>LeadDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leads\LeadDetails.aspx.designer.cs">
+      <DependentUpon>LeadDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Leads\LeadList.aspx.cs">
+      <DependentUpon>LeadList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leads\LeadList.aspx.designer.cs">
+      <DependentUpon>LeadList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Leads\Leads.aspx.cs">
+      <DependentUpon>Leads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leads\Leads.aspx.designer.cs">
+      <DependentUpon>Leads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Opportunities\Opportunities.aspx.cs">
+      <DependentUpon>Opportunities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Opportunities\Opportunities.aspx.designer.cs">
+      <DependentUpon>Opportunities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Opportunities\OpportunityDetails.aspx.cs">
+      <DependentUpon>OpportunityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Opportunities\OpportunityDetails.aspx.designer.cs">
+      <DependentUpon>OpportunityDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Opportunities\OpportunityList.aspx.cs">
+      <DependentUpon>OpportunityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Opportunities\OpportunityList.aspx.designer.cs">
+      <DependentUpon>OpportunityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegister.aspx.cs">
+      <DependentUpon>UserRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRegister.aspx.designer.cs">
+      <DependentUpon>UserRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanySetup.aspx.cs">
+      <DependentUpon>CompanySetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanySetup.aspx.designer.cs">
+      <DependentUpon>CompanySetup.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Browsers\" />
+    <Folder Include="UserData\Docs\" />
+    <Folder Include="UserData\Images\8\" />
+    <Folder Include="UserData\Notes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4243/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

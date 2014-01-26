@@ -1,0 +1,303 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="C3App.SiteMaster" %>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - C3</title>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%--<%: Scripts.Render("~/bundles/CustomJs") %>--%>
+    </asp:PlaceHolder>
+    <link rel="stylesheet" href="~/Content/themes/base/foundation.css" />
+    <link rel="stylesheet" href="~/Content/themes/base/font-awesome.css" />
+    <link rel="stylesheet" href="~/Content/themes/base/jquery.mCustomScrollbar.css" />
+    <!--[if lt IE 7]> <link rel="stylesheet" href="css/font-awesome-ie7.css"/> <![endif]-->
+    <script src="/Scripts/modernizr.foundation.js"></script>
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <webopt:BundleReference ID="BundleReference1" runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="Form1" runat="server" class="runat-server" autocomplete="off">
+        
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"   >
+            <Scripts>
+
+                <%--Framework Scripts--%>
+                <%--<asp:ScriptReference Name="MsAjaxBundle" />--%>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Name="WebForms.js" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Path="~/Scripts/foundation.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.keyfilter.js" />
+                <asp:ScriptReference Path="~/Scripts/Site.js" />
+                <asp:ScriptReference Path="~/Scripts/custom.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.mousewheel.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.mCustomScrollbar.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.PrintArea.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+   
+        <asp:Panel CssClass="container-wrapper" runat="server">
+            <asp:Panel ID="LeftPanel" runat="server">
+                <a href="#" class="main-control"><i class="icon-plus-sign"></i></a>
+            <asp:Panel CssClass="left-panel" runat="server">
+                <ul class="pull-top">
+                    <li><a href="/Dashboard/Dashboard.aspx"><i class="icon-dashboard"></i><span>Dashboard</span></a></li>
+                    <li id="contact" runat="server"><a href="/Contacts/Contacts.aspx?ShowPanel=ViewPanel"><i class="icon-group"></i><span>Contact</span></a></li>
+                    <%--<li><a href="javascript:void(0)"><i class="icon-calendar"></i></a></li>--%>
+                    <li><a href="javascript:void(0)"><i class="icon-facebook-sign"></i><span>Facebook</span></a></li>
+                    <li><a href="javascript:void(0)"><i class="icon-twitter"></i><span>Twitter</span></a></li>
+                    <%--<li><a href="/Emails/Emails.aspx?ShowPanel=ViewPanel"><i class="icon-envelope-alt"></i></a></li>--%>
+                    <li id="task" runat="server" ><a href="/Tasks/Tasks.aspx?ShowPanel=ViewPanel"><i class="icon-ok"></i><span>Task</span></a></li>
+                    <li id="documents" runat="server" ><a href="/Documents/Documents.aspx?ShowPanel=ViewPanel"><i class="icon-file"></i><span>Document</span></a></li>                    
+                </ul>
+                <ul class="pull-bottom">
+                    <li id="administrator" runat="server"><a href="/Administration/Administration.aspx"><i class="icon-user"></i><span>Administration</span></a></li>
+                    <li><asp:LinkButton ID="signout" runat="server" OnClick="signout_Click"><i class="icon-signout"></i><span>Logout</span></asp:LinkButton></li>
+                    <li class="settings-icon"><a href="/UserProfile.aspx?ShowPanel=DetailsPanel"><i class="icon-cog"></i><span>Settings</span></a></li> 
+                    <li class="company-icon"><a href="javascript:void(0)"><img src="../../Content/images/c3/logo-medium.png" width="20"/></a></li>
+                </ul>
+            </asp:Panel>
+                
+            <asp:Panel CssClass="main-nav" runat="server">
+                <asp:Panel ID="Panel1" runat="server">       
+                       <%= MenuCreate() %>
+                    </asp:Panel>
+
+       <%--         <ul>
+                    <li class="dropdown">
+                        <asp:Button ID="Button1" runat="server" CommandName="PanelSet" CommandArgument="ViewDetails" Text="Home" PostBackUrl="Default.aspx?ShowPanel=DetailsPanel" OnClick="PanelSet" />
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Marketing</a>
+                        <ul>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Campaign</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button2" runat="server" Text="Create Campaign" />
+                                    <li>
+                                        <asp:Button ID="Button3" runat="server" Text="View Campaign" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Contacts</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button5" runat="server" CommandName="PanelSet" CommandArgument="ViewDetails" Text="Create Contact" PostBackUrl="~/Contacts/Contacts.aspx" OnClick="PanelSet" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button6" runat="server" Text="View Contacts" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Accounts</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button8" runat="server" Text="Create Account" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button9" runat="server" Text="View Accounts" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Leads</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button12" runat="server" Text="Create Lead" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button13" runat="server" Text="View Leads" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button14" runat="server" Text="Convert Leads" />
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Sales</a>
+                        <ul>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Accounts</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button16" runat="server" Text="Create Account" PostBackUrl="~/Accounts/Accounts.aspx?ShowPanel=DetailsPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button17" runat="server" Text="View Accounts" PostBackUrl="~/Accounts/Accounts.aspx?ShowPanel=ViewPanel" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Contacts</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button19" runat="server" Text="Create Contact" PostBackUrl="~/Contacts/Contacts.aspx?ShowPanel=DetailsPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button20" runat="server" Text="View Contacts" PostBackUrl="~/Contacts/Contacts.aspx?ShowPanel=ViewPanel" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Leads</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button22" runat="server" Text="Create Lead" PostBackUrl="~/Leads/Leads.aspx?ShowPanel=DetailsPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button23" runat="server" Text="View Leads" PostBackUrl="~/Leads/Leads.aspx?ShowPanel=ViewPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button24" runat="server" Text="Convert Leads" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Opportunities</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button26" runat="server" Text="Create Opportunity" PostBackUrl="~/Opportunities/Opportunities.aspx?ShowPanel=DetailsPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button27" runat="server" Text="View Opportunities" PostBackUrl="~/Opportunities/Opportunities.aspx?ShowPanel=ViewPanel" />
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Orders</a>
+                        <ul>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Products</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button30" runat="server" Text="Create Product" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button31" runat="server" Text="View Products" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Orders</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button33" runat="server" Text="Create Order" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button34" runat="server" Text="View Orders" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Invoices</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button36" runat="server" Text="Create Invoice" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button37" runat="server" Text="View Invoices" />
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Supports</a>
+                        <ul>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Cases</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button39" runat="server" Text="Create Case" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button40" runat="server" Text="View Cases" />
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Administraion</a>
+                        <ul>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Manage Users</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button4" runat="server" Text="Create User" PostBackUrl="~/Users/Users.aspx?ShowPanel=DetailsPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button7" runat="server" Text="View Users" PostBackUrl="~/Users/Users.aspx?ShowPanel=ViewPanel" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Manage Roles</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button21" runat="server" Text="Create Role" PostBackUrl="~/Administration/ACLRoles/ACLRoles.aspx?ShowPanel=DetailsPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button10" runat="server" Text="View Roles" PostBackUrl="~/Administration/ACLRoles/ACLRoles.aspx?ShowPanel=ViewPanel" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="javascript:void(0)">Manage Teams</a>
+                                <ul>
+                                    <li>
+                                        <asp:Button ID="Button15" runat="server" Text="Create Team" PostBackUrl="~/Users/Teams.aspx?ShowPanel=DetailsPanel" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="Button18" runat="server" Text="View Teams" PostBackUrl="~/Users/Teams.aspx?ShowPanel=ViewPanel" />
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>--%>
+            </asp:Panel>
+            </asp:Panel>
+                <asp:Panel ID="ContainerBody" CssClass="container-body" runat="server">
+
+                    <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+                    </asp:ContentPlaceHolder>
+            </asp:Panel>
+        </asp:Panel>
+
+    </form>
+</body>
+</html>

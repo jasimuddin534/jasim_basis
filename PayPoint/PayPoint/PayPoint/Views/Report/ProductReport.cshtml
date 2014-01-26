@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "ProductReport";
+}
+        <div class="row-fluid">
+            <div class="span12 content-body">
+
+                  <table class="table table-bordered">
+                            <tr  style="background-color:#ddd" >
+                                
+                                <th>ProductName</th>
+                                <th>ModelNo</th>
+                                <th>BarCode</th>
+                                <th>Price</th>
+                                
+                            </tr>
+                            @foreach (var item in ViewBag.products)
+                            {
+                                var productnames = item.Name;
+                                var modelNo = item.BarCode;
+                                var barCode = item.Model;
+                                var unitPrice = item.UnitPrice;
+                                
+                                <tr>
+                                    
+                                    <td>
+                                        @productnames
+                                    </td>
+                                     <td>
+                                        @modelNo
+                                    </td>
+                                    <td>
+                                        @barCode
+                                    </td>
+                                    <td>
+                                        @unitPrice
+                                    </td>
+                                    
+                                </tr>     
+                           }
+                        </table>
+            </div>
+
+        </div>
+        <div class="row-fluid">
+            <div class="span12 content-body">
+                @using (Html.BeginForm())
+                {
+                    var select = "";
+                    <table class="table table-bordered">    
+                        <tr>
+                            <th>Salesman</th>
+                            <td>
+                                <select id="salesman" name="salesman">
+                                
+                                    @foreach (string user in ViewBag.users)
+                                    {
+                                        //if (role == ViewBag.role)
+                                        //{ select = "selected = selected"; }
+                                        //else { select = ""; }   
+                                    
+                                        <option value="@user" @select>@user</option>
+                                    }
+                               
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>FromDate</th>
+                            <td>
+
+                                <input type="text" id="fromdate" name="fromdate"/>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ToDate</th>
+                            <td>
+
+                               <input type="text" id="todate" name="todate"/>
+                                
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <a href="/home/users" class="btn" >Back</a> &nbsp; &nbsp;
+                                <input type="submit" value="Save" class="btn signin" />
+                            </td>
+                        </tr>
+                    </table>
+                  }
+
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12 content-body">
+
+                  <table class="table table-bordered">
+                            <tr  style="background-color:#ddd" >
+                                
+                                <th>Date</th>
+                                <th>OrderNo</th>
+                                <th>ProductType</th>
+                                <th>Brand</th>
+                                <th>Model</th>
+                                <th>SellingPrice</th>
+
+                                
+                            </tr>
+
+                            @*    <tr>
+                                        <td>
+                                            @ViewBag.products1.Category
+                                        </td>
+                                        <td>
+                                            @ViewBag.products1.Brand
+                                        </td>
+                                        <td>
+                                            @ViewBag.products1.Model
+                                        </td>
+                                        <td>
+                                            @ViewBag.products1.UnitPrice
+                                        </td>
+                                    
+                                    </tr>*@
+                                
+                      @foreach (var order in ViewBag.orders)
+                                {
+                                    var date = order.CreatedTime;
+                                    var orderNo = order.OrderNumber;
+                                    <tr>
+                                        <td>
+                                            @date
+                                        </td>
+                                    <td>
+                                        @orderNo
+                                    </td>
+                                        </tr>
+                            }
+                        </table>
+            </div>
+
+        </div>
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts
+    {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/todo")
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".wrapper").addClass("white");
+            });
+        </script>
+    }
+}

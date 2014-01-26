@@ -1,0 +1,135 @@
+﻿<asp:Panel 
+    SkinID = "DetailsTab"
+    runat = "server"
+    CssClass = "details-tab two columns tab"
+></asp:Panel>
+
+<asp:Panel 
+    SkinID = "ViewTab"
+    runat = "server"
+    CssClass = "view-tab two columns tab"
+></asp:Panel>
+
+<asp:Button 
+    SkinID = "TabTitle"
+    runat = "server"
+    CssClass = "tab-title"
+></asp:Button>
+
+<asp:LinkButton 
+    SkinID = "TabTitle"
+    runat = "server"
+    CssClass = "tab-title"
+></asp:LinkButton>
+
+<asp:Panel
+    SkinID = "SearchPanel"
+    runat = "server"
+    CssClass = "search-panel"
+></asp:Panel>
+
+<asp:Panel
+    SkinID = "ListPanel"
+    runat = "server"
+    CssClass = "list-panel"
+></asp:Panel>
+
+<asp:Panel
+    SkinID = "MiniDetailBasicPanel"
+    runat = "server"
+    CssClass = "mini-detail-panel"
+></asp:Panel>
+
+<asp:Panel
+    SkinID = "MiniDetailMorePanel"
+    runat = "server"
+    CssClass = "mini-detail-more-panel"
+></asp:Panel>
+
+<asp:Panel 
+    SkinID="TabContent" 
+    CssClass="tab-content"
+    runat="server"
+></asp:Panel>
+
+<asp:Panel
+    SkinID="ModalPopLeft"
+    CssClass="modal-pop left"
+    runat="server"
+></asp:Panel>
+
+<asp:Panel
+    SkinID="ModalPopRight"
+    CssClass="modal-pop right"
+    runat="server"
+>
+</asp:Panel>
+
+<asp:Panel
+    SkinID="ModalPopRightBig"
+    CssClass="modal-pop right big"
+    runat="server"
+>
+</asp:Panel>
+
+<asp:Panel
+    SkinID="ModalCreatePanelLeft"
+    CssClass="modal-create-panel left"
+    runat="server"
+></asp:Panel>
+
+<asp:Panel
+    SkinID="ModalCreatePanelRight"
+    CssClass="modal-create-panel right"
+    runat="server"
+></asp:Panel>
+
+<asp:Panel
+    SkinID="ModalSearchPanel"
+    CssClass="modal-search-panel"
+    runat="server"
+></asp:Panel>
+
+<asp:Panel
+    SkinID="ModalListPanel"
+    CssClass="modal-list-panel"
+    runat="server"
+></asp:Panel>
+
+<asp:Label
+    runat="server"
+    SkinID="ModalTitle"
+    CssClass="modal-title"
+></asp:Label>
+
+<asp:HyperLink 
+    runat="server" 
+    SkinID="ModalCloseButton"
+    CssClass="modal-close-btn"
+></asp:HyperLink>
+
+<asp:HyperLink 
+    runat="server" 
+    SkinID="CreateModalCloseButton"
+    CssClass="create-modal-close-btn"
+></asp:HyperLink>
+
+<asp:Button
+    runat="server"
+    SkinID="ButtonWithTextBox"
+    CssClass="modal-pop-form-btn"
+></asp:Button>
+
+<asp:LinkButton
+    runat="server"
+    SkinID="ButtonWithTextBox"
+    CssClass="modal-pop-form-btn"
+></asp:LinkButton>
+
+<asp:TextBox
+    runat="server" 
+    SkinID="TextBoxWithButton"
+    CssClass="input-with-btn"
+></asp:TextBox>
+
+<asp:ValidationSummary runat="server" DisplayMode="BulletList" CssClass="errors" />
