@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Preset Color</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--basic style sheet-->
+    <link rel="stylesheet" href="font-awosome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!--preset color style sheet-->
+    <link rel="alternate stylesheet" type="text/css" href="css/blue.css" title="blue" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="css/red.css" title="red" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="css/darkblue.css" title="darkblue" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="css/cyan.css" title="cyan" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="css/green.css" title="green" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/orange.css" title="orange" media="screen" />
+
+</head>
+<body>
+
+    <h1>This is h1</h1>
+
+    <div class="theme-color-picker">
+        <div id="configure-button" class="configure-button" data-expanded="false">
+            <a href="#"><i class="fa fa-cog fa-2x"></i></a>
+        </div>
+        <div class="color-options" id="color-options">
+            <h3>Preset Color</h3>
+            <div class="options-choosing-palette">
+                <ul>
+                    <li><a href="#" rel="blue" class="styleswitch blue-picker"><img src="images/blue-picker.png" /></a></li>
+                    <li><a href="#" rel="red" class="styleswitch red-picker"><img src="images/red-picker.png" /></a></li>
+                    <li><a href="#" rel="darkblue" class="styleswitch darkblue-picker"><img src="images/darkblue-picker.png" /></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" rel="orange" class="styleswitch orange-picker"><img src="images/orange-picker.png" /></a></li>
+                    <li><a href="#" rel="cyan" class="styleswitch cyan-picker"><img src="images/cyan-picker.png" /></a></li>
+                    <li><a href="#" rel="green" class="styleswitch green-picker"><img src="images/green-picker.png" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--script area-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/styleSheetToogle.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // Call stylesheet init so that all stylesheet changing functions
+            // will work.
+            $.stylesheetInit();
+
+            // This code loops through the stylesheets when you click the link with
+            // an ID of "toggler" below.
+            $('#toggler').bind(
+				'click',
+				function (e) {
+				    $.stylesheetToggle();
+				    return false;
+				}
+			);
+
+            // When one of the styleswitch links is clicked then switch the stylesheet to
+            // the one matching the value of that links rel attribute.
+            $('.styleswitch').bind(
+				'click',
+				function (e) {
+				    $.stylesheetSwitch(this.getAttribute('rel'));
+				    return false;
+				}
+			);
+
+
+            $("#configure-button").on("click", function (e) {
+                e.preventDefault();
+                if ($(this).data("expanded") == "true") {
+                    $("#color-options").css({ right: '-200px' });
+                    $("#configure-button").css({ right: '0px' });
+                    $(this).data("expanded", "false");
+                } else {
+                    $("#color-options").css({ right: '0px' });
+                    $("#configure-button").css({ right: '200px' });
+                    $(this).data("expanded", "true");
+                }
+
+            });
+
+
+        }
+        );
+    </script>
+</body>
+</html>

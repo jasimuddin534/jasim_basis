@@ -1,0 +1,22 @@
+﻿/*------------------------------------*\
+   Theme Color Picker style End
+\*------------------------------------*/
+
+.theme-color-picker { position: fixed; top: 200px; right: 0px; z-index: 9; }
+
+.configure-button { background-color: #696763; color: #ffffff; height: 50px; width: 50px; position: absolute; right: 0px; padding: 11px 14px; transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; }
+
+    .configure-button a:hover { color: #ffffff; }
+
+.options-choosing-palette { padding: 10px 0px 10px 17px; }
+
+.color-options { height: 200px; width: 200px; border: 1px solid #696763; right: -200px; position: absolute; transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; background: #ffffff; }
+
+    .color-options h3 { padding: 0px 20px; }
+
+    .color-options ul { padding: 0px; margin: 0px; margin-top: 10px; }
+
+        .color-options ul li { padding: 5px 0px; margin: 0px; display: inline; margin-right: 10px; }
+/*------------------------------------*\
+   Theme Color Picker style End
+\*------------------------------------*/
